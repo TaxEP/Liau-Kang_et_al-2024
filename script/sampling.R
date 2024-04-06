@@ -36,7 +36,9 @@ tree$tip.label <- gsub("_", " ", tree$tip.label, fixed = TRUE)
 # correcting errors
 
 dat_clade[311, 2] <- "Mimosa montis-carasae" #typo
+dat_clade[250, 2] <- "Mimosa invisa" #"accepted name" puts it as Mimosa invisa
 dat_clade[107, 4] <- "A" #typo
+tree$tip.label[261] <- "Mimosa invisa" #"accepted name" puts it as Mimosa invisa
 
 tree <- drop.tip(tree, "Mimosa hirsutula") #name don't exist
 
@@ -96,6 +98,8 @@ resolved_tree_labels[10, 5] = "Mimosa vernicosa var. ciliata"
 resolved_dat_clade[363, 5] = "Mimosa vernicosa var. ciliata"
 # "no opinion", but the name is accepted
 
+
+
 # removing "(double entry)" and duplicates of cleaned_name
 
 dat_clade$cleaned_name[duplicated(dat_clade$cleaned_name)]
@@ -147,7 +151,7 @@ dat <- merge(dat, dat_pollen[, c("name_phylogeny", "name_phylogeny")],
              by.x = "taxon", 
              by.y = "name_phylogeny", all.x = TRUE)
 
-
+## inserting the clades for some species
 
 #-----------------------------------------------------------------------------#
 
@@ -173,4 +177,12 @@ write.table(setdiff(dat_pollen$name_phylogeny, dat$taxon),
           row.names = FALSE)
 
 ## Percentage of pollen data for each tree clade
+
+clades_percentages <- dat %>%
+  group_by(clade) %>%
+  summarise(pollen_data = round(mean(!is.na(name_phylogeny.1)) * 100,2))
+
+write.csv(clades_percentages,
+          "output/data/sampling-clade_percentages.csv",
+          row.names = F)
 
