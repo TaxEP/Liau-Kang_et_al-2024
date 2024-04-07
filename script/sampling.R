@@ -15,7 +15,7 @@ dat_clade <- read.csv("data/Mimosa_tree_data-Vasconcelos2020.csv",
 dat_eco <- read.csv("data/eco_data-piptadenia_group.csv") %>%
   filter(genus == "Mimosa")
 
-dat_pollen <- read.csv("data/pollen_matrix.csv") %>%
+dat_pollen <- read.csv("data/pollen_data.csv") %>%
   filter(genus == "Mimosa") %>%
   select(name_phylogeny)
 
