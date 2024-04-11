@@ -12,12 +12,9 @@ tree <- read.nexus("data/mimosa_tree-Vasconcelos2020.nex")
 dat_clade <- read.csv("data/Mimosa_tree_data-Vasconcelos2020.csv", 
                       header = T, sep = ",")
 
-dat_eco <- read.csv("data/eco_data-piptadenia_group.csv") %>%
-  filter(genus == "Mimosa")
-
-dat_pollen <- read.csv("data/pollen_data.csv") %>%
+dat_pollen <- read.csv("data/pollen_data-mimosa.csv") %>%
   filter(genus == "Mimosa") %>%
-  select(name_phylogeny)
+  select(cleaned_name)
 
 
 
@@ -147,9 +144,9 @@ dat <- merge(dat, dat_clade[, c("accepted_name", "clade")],
               by.x = "taxon", 
               by.y = "accepted_name", all.x = TRUE)
 
-dat <- merge(dat, dat_pollen[, c("name_phylogeny", "name_phylogeny")], 
+dat <- merge(dat, dat_pollen[, c("cleaned_name", "cleaned_name")], 
              by.x = "taxon", 
-             by.y = "name_phylogeny", all.x = TRUE)
+             by.y = "cleaned_name", all.x = TRUE)
 
 ## inserting the clades for some species
 
@@ -161,17 +158,17 @@ dat <- merge(dat, dat_pollen[, c("name_phylogeny", "name_phylogeny")],
 
 ## Percentage of tree taxa with pollen data
 
-round(sum(!is.na(dat$name_phylogeny.1)) / length(dat$name_phylogeny.1) * 100,2)
+round(sum(!is.na(dat$cleaned_name.1)) / length(dat$cleaned_name.1) * 100,2)
 
 ## Number and name of matrix species not in the phylogeny
 
-length(setdiff(dat_pollen$name_phylogeny, dat$taxon))
+length(setdiff(dat_pollen$cleaned_name, dat$taxon))
 
-setdiff(dat_pollen$name_phylogeny, dat$taxon)
+setdiff(dat_pollen$cleaned_name, dat$taxon)
 
 dir.create("output/data", showWarnings = F)
 
-write.table(setdiff(dat_pollen$name_phylogeny, dat$taxon), 
+write.table(setdiff(dat_pollen$cleaned_name, dat$taxon), 
           "output/data/taxa-data_not_tree.csv", 
           col.names = FALSE, 
           row.names = FALSE)
@@ -180,7 +177,7 @@ write.table(setdiff(dat_pollen$name_phylogeny, dat$taxon),
 
 clades_percentages <- dat %>%
   group_by(clade) %>%
-  summarise(pollen_data = round(mean(!is.na(name_phylogeny.1)) * 100,2))
+  summarise(pollen_data = round(mean(!is.na(cleaned_name.1)) * 100,2))
 
 write.csv(clades_percentages,
           "output/data/sampling-clade_percentages.csv",
