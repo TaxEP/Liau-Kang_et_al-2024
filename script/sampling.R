@@ -7,7 +7,7 @@ library(tidyverse)
 library(phytools)
 library(TNRS)
 
-tree <- read.nexus("data/mimosa_tree-Vasconcelos2020.nex")
+tree <- read.tree("data/mimosa_tree-Vasconcelos2020.tre")
 
 dat_clade <- read.csv("data/Mimosa_tree_data-Vasconcelos2020.csv", 
                       header = T, sep = ",")
@@ -35,7 +35,7 @@ tree$tip.label <- gsub("_", " ", tree$tip.label, fixed = TRUE)
 dat_clade[311, 2] <- "Mimosa montis-carasae" #typo
 dat_clade[250, 2] <- "Mimosa invisa" #"accepted name" puts it as Mimosa invisa
 dat_clade[107, 4] <- "A" #typo
-tree$tip.label[261] <- "Mimosa invisa" #"accepted name" puts it as Mimosa invisa
+tree$tip.label[281] <- "Mimosa invisa" #"accepted name" puts it as Mimosa invisa
 
 tree <- drop.tip(tree, "Mimosa hirsutula") #name don't exist
 
