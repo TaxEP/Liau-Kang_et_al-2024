@@ -20,15 +20,10 @@ info_pollen <- dat_pollen %>%
 ## filtering for characters with missing data minor or equal to 60%
 
 matrix_pollen <- dat_pollen %>%
-  select(11:29) %>% #selecting columns with pollen characters
+  select(11:21) %>% #selecting columns with pollen characters
   .[, colMeans(is.na(.)) * 100 <= 40] #filtering
 
 rownames(matrix_pollen) <- dat_pollen$cleaned_name
-
-# removing min and max columns (we will only use mean)
-
-str(matrix_pollen)
-matrix_pollen <- matrix_pollen[,-c(6,7,9,10,12,13)]
 
 ## making discretization of continuous traits in order to use Claddis package
 
