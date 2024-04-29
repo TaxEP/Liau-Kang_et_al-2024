@@ -7,7 +7,7 @@ library(tidyverse)
 library(phytools)
 library(Claddis)
 
-dat_pollen <- read.csv("data/pollen_data-mimosa.csv", na.strings = c("", "?")) %>%
+dat_pollen <- read.csv("data/pollen_data-mimosa.csv", na.strings = c("NA")) %>%
   filter(genus == "Mimosa")
 
 #### Preparing data for analysis ####
