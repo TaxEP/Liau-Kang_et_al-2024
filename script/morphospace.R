@@ -181,6 +181,7 @@ dev.off()
 #### Disparity analysis - Disparity Metrics ####
 
 library(dispRity)
+library(openxlsx)
 
 ## reading clades data file
 
@@ -228,7 +229,7 @@ groups_clades <- Filter(function(x) { length(x) > 3 }, groups_clades)
 
 sub_clade <- custom.subsets(pcoa$vectors, groups_clades)
 bootstrapped_data <-
-  boot.matrix(sub_clade, bootstraps = bootstraps, rarefaction = FALSE)
+  boot.matrix(sub_clade, bootstraps = bootstraps, rarefaction = F)
 disparity_clade <-
   dispRity(bootstrapped_data, metric = c(sum, variances))
 disp_clade <- summary(disparity_clade)
@@ -240,10 +241,16 @@ wilcoxon_disp_clade <- test.dispRity(disparity_clade,
 
 sub_sampling <- custom.subsets(pcoa$vectors, groups_samplings)
 bootstrapped_data <-
-  boot.matrix(sub_sampling, bootstraps = bootstraps, rarefaction = FALSE)
+  boot.matrix(sub_sampling, bootstraps = bootstraps, rarefaction = F)
 disparity_sampling <-
   dispRity(bootstrapped_data, metric = c(sum, variances))
 disp_sampling <- summary(disparity_sampling)
 wilcoxon_disp_sampling <- test.dispRity(disparity_sampling, 
                                      wilcox.test)
+
+# saving
+
+list_of_datasets <- list("Disparity - Samplings" = disp_sampling, 
+                         "Disparity - Clades" = disp_clade)
+write.xlsx(list_of_datasets, file = "output/data/disparity_metric.xlsx")
 
