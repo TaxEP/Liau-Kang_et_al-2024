@@ -177,3 +177,65 @@ morphospace
 dev.off()
 
 
+
+#### Disparity analysis - Disparity Metrics ####
+
+library(dispRity)
+
+## reading clades data file
+
+clades_dat <- read.csv("output/data/spp_clade_data.csv")
+
+## creating lists grouping species of each clade
+## (one list for before and other for after new descriptions)
+
+# adding clade information to info_pollen
+vectors_clades <- merge(info_pollen, clades_dat[, c("taxon", "clade")], 
+             by.x = "cleaned_name", 
+             by.y = "taxon", all.x = TRUE)
+
+# removing taxa without clade information
+vectors_clades <- na.omit(vectors_clades)
+
+# creating the list of lists (before and after descriptions)
+
+list_before <- vectors_clades %>%
+  filter(Status == "Already described") %>%
+  select(cleaned_name, clade)
+
+list_before <- split(list_before$cleaned_name, list_before$clade)
+
+list_after <- vectors_clades %>%
+  select(cleaned_name, clade)
+
+list_after <- split(list_after$cleaned_name, list_after$clade)
+
+# creating df with vectors and species names as rownames
+
+row.names(vectors_clades) <- NULL
+
+vectors <- vectors_clades %>%
+  select(cleaned_name, PC1, PC2) %>%
+  column_to_rownames("cleaned_name")
+
+## calculating sum of variances and statistics
+
+bootstraps <- 1000
+
+#before
+sub_clade <- custom.subsets(pcoa$vectors, list_before)
+bootstrapped_data <-
+  boot.matrix(sub_clade, bootstraps = bootstraps, rarefaction = FALSE)
+clade_disparity <-
+  dispRity(bootstrapped_data, metric = c(sum, variances))
+clade_DISP <- summary(clade_disparity)
+clade_DISP_wilcoxon <- test.dispRity(clade_disparity, wilcox.test)
+
+#after
+sub_clade2 <- custom.subsets(pcoa$vectors, list_after)
+bootstrapped_data2 <-
+  boot.matrix(sub_clade2, bootstraps = bootstraps, rarefaction = FALSE)
+clade_disparity2 <-
+  dispRity(bootstrapped_data2, metric = c(sum, variances))
+clade_DISP2 <- summary(clade_disparity)
+clade_DISP_wilcoxon2 <- test.dispRity(clade_disparity2, wilcox.test)

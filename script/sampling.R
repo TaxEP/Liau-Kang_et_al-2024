@@ -138,17 +138,22 @@ tree <- keep.tip(tree, tree$tip.label[grep("^Mimosa_", tree$tip.label)])
 dat <- as.data.frame(tree$tip.label)
 colnames(dat) <- "taxon"
 
-## adding clade information from Vasconcelos 2020 to data for analysis
+## adding clade information from Vasconcelos 2020 to data
 
 dat <- merge(dat, dat_clade[, c("accepted_name", "clade")], 
               by.x = "taxon", 
               by.y = "accepted_name", all.x = TRUE)
 
-dat <- merge(dat, dat_pollen[, c("cleaned_name", "cleaned_name")], 
-             by.x = "taxon", 
-             by.y = "cleaned_name", all.x = TRUE)
+## adding pollen sampling information to data
 
-## inserting the clades for some species
+dat <- dat %>%
+  mutate(pollen_data = ifelse(taxon %in% dat_pollen$cleaned_name, "yes", NA))
+
+## saving file for disparity analysis
+
+write.csv(dat, "output/data/spp_clade_data.csv", row.names = F)
+
+
 
 #-----------------------------------------------------------------------------#
 
@@ -158,7 +163,7 @@ dat <- merge(dat, dat_pollen[, c("cleaned_name", "cleaned_name")],
 
 ## Percentage of tree taxa with pollen data
 
-round(sum(!is.na(dat$cleaned_name.1)) / length(dat$cleaned_name.1) * 100,2)
+round(sum(!is.na(dat$pollen_data)) / length(dat$pollen_data) * 100,2)
 
 ## Number and name of matrix species not in the phylogeny
 
@@ -177,7 +182,7 @@ write.table(setdiff(dat_pollen$cleaned_name, dat$taxon),
 
 clades_percentages <- dat %>%
   group_by(clade) %>%
-  summarise(pollen_data = round(mean(!is.na(cleaned_name.1)) * 100,2))
+  summarise(pollen_data = round(mean(!is.na(pollen_data)) * 100,2))
 
 write.csv(clades_percentages,
           "output/data/sampling-clade_percentages.csv",
