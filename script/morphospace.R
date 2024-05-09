@@ -195,47 +195,53 @@ vectors_clades <- merge(info_pollen, clades_dat[, c("taxon", "clade")],
              by.y = "taxon", all.x = TRUE)
 
 # removing taxa without clade information
-vectors_clades <- na.omit(vectors_clades)
+vectors_clade <- na.omit(vectors_clades)
 
-# creating the list of lists (before and after descriptions)
+# creating the list of lists for clades
 
-list_before <- vectors_clades %>%
+groups_clades <- vectors_clades %>%
+  select(cleaned_name, clade)
+
+groups_clades <- split(groups_clades$cleaned_name, groups_clades$clade)
+
+# creating the list of lists for all data (before and after)
+
+group_original <- vectors_clades %>%
   filter(Status == "Already described") %>%
-  select(cleaned_name, clade)
+  select(cleaned_name)
 
-list_before <- split(list_before$cleaned_name, list_before$clade)
+group_new <- vectors_clades %>%
+  select(cleaned_name)
 
-list_after <- vectors_clades %>%
-  select(cleaned_name, clade)
-
-list_after <- split(list_after$cleaned_name, list_after$clade)
-
-# creating df with vectors and species names as rownames
-
-row.names(vectors_clades) <- NULL
-
-vectors <- vectors_clades %>%
-  select(cleaned_name, PC1, PC2) %>%
-  column_to_rownames("cleaned_name")
+groups_samplings <- list(original = c(group_original$cleaned_name), 
+                         new_descriptions = group_new$cleaned_name)
 
 ## calculating sum of variances and statistics
 
 bootstraps <- 1000
 
-#before
-sub_clade <- custom.subsets(pcoa$vectors, list_before)
+# clades
+
+groups_clades <- Filter(function(x) { length(x) > 3 }, groups_clades)
+
+sub_clade <- custom.subsets(pcoa$vectors, groups_clades)
 bootstrapped_data <-
   boot.matrix(sub_clade, bootstraps = bootstraps, rarefaction = FALSE)
-clade_disparity <-
+disparity_clade <-
   dispRity(bootstrapped_data, metric = c(sum, variances))
-clade_DISP <- summary(clade_disparity)
-clade_DISP_wilcoxon <- test.dispRity(clade_disparity, wilcox.test)
+disp_clade <- summary(disparity_clade)
+wilcoxon_disp_clade <- test.dispRity(disparity_clade, 
+                                     wilcox.test, 
+                                     correction = "holm")
 
-#after
-sub_clade2 <- custom.subsets(pcoa$vectors, list_after)
-bootstrapped_data2 <-
-  boot.matrix(sub_clade2, bootstraps = bootstraps, rarefaction = FALSE)
-clade_disparity2 <-
-  dispRity(bootstrapped_data2, metric = c(sum, variances))
-clade_DISP2 <- summary(clade_disparity)
-clade_DISP_wilcoxon2 <- test.dispRity(clade_disparity2, wilcox.test)
+# samplings
+
+sub_sampling <- custom.subsets(pcoa$vectors, groups_samplings)
+bootstrapped_data <-
+  boot.matrix(sub_sampling, bootstraps = bootstraps, rarefaction = FALSE)
+disparity_sampling <-
+  dispRity(bootstrapped_data, metric = c(sum, variances))
+disp_sampling <- summary(disparity_sampling)
+wilcoxon_disp_sampling <- test.dispRity(disparity_sampling, 
+                                     wilcox.test)
+
