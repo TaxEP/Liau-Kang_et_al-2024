@@ -220,6 +220,8 @@ groups_samplings <- list(original = c(group_original$cleaned_name),
 
 bootstraps <- 1000
 
+set.seed(777)
+
 # clades
 
 groups_clades <- Filter(function(x) { length(x) > 3 }, groups_clades)
