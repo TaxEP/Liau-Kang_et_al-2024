@@ -1,4 +1,4 @@
-### DISPARITY ANALYSIS - MORPHOSPACE - MIMOSA POLLEN
+### DISPARITY ANALYSIS - MORPHOSPACE AND METRICS - MIMOSA POLLEN
 ## 05-10-2023
 
 #### Libraries and Data ####
@@ -214,8 +214,8 @@ group_original <- vectors_clades %>%
 group_new <- vectors_clades %>%
   select(cleaned_name)
 
-groups_samplings <- list(original = c(group_original$cleaned_name), 
-                         new_descriptions = group_new$cleaned_name)
+groups_samplings <- list("Previous data" = c(group_original$cleaned_name), 
+                         "Current data" = group_new$cleaned_name)
 
 ## calculating sum of variances and statistics
 
@@ -265,6 +265,8 @@ disp_sampling_sr <- summary(disparity_sampling_sr)
 
 # saving
 
+library(patchwork)
+
 list_of_datasets_sv <- list("Disparity - Samplings" = disp_sampling_sv, 
                          "Disparity - Clades" = disp_clade_sv)
 write.xlsx(list_of_datasets_sv, file = "output/data/sum_of_variances.xlsx")
@@ -273,3 +275,28 @@ list_of_datasets_sr <- list("Disparity - Samplings" = disp_sampling_sr,
                          "Disparity - Clades" = disp_clade_sr)
 write.xlsx(list_of_datasets_sr, file = "output/data/sum_of_ranges.xlsx")
 
+jpeg(
+  filename = "output/plots/metrics.jpeg",
+  width = c(174),
+  height = c(134),
+  units = "mm",
+  res = 600
+)
+
+par(mfrow=c(2,2), mar=c(2,2,1.5,0.5), xpd=TRUE)
+
+sampling_colors <- c("#4C72B0", "#DD8452")
+clades_colors <- c("#4C78A8", "#9ECF99", "#F17C67", 
+                   "#B279A2", "#CCB974", "#64B5CD",
+                   "#E36C09","#D17FED")
+
+plot(disparity_sampling_sv, main = "Sum of Variances", 
+     colors = sampling_colors)
+plot(disparity_sampling_sr, main = "Sum of Ranges", yaxt = "n", 
+     colors = sampling_colors)
+plot(disparity_clade_sv, 
+     colors = clades_colors)
+plot(disparity_clade_sr, yaxt = "n", 
+     colors = clades_colors)
+
+dev.off()
