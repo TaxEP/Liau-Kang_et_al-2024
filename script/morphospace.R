@@ -230,18 +230,18 @@ groups_clades <- Filter(function(x) { length(x) > 3 }, groups_clades)
 sub_clade <- custom.subsets(pcoa$vectors, groups_clades)
 bootstrapped_data <-
   boot.matrix(sub_clade, bootstraps = bootstraps, rarefaction = F)
-disparity_clade <-
+disparity_clade_sv <-
   dispRity(bootstrapped_data, metric = c(sum, variances))
-disp_clade_sv <- summary(disparity_clade)
+disp_clade_sv <- summary(disparity_clade_sv)
 
 # samplings - SV
 
 sub_sampling <- custom.subsets(pcoa$vectors, groups_samplings)
 bootstrapped_data <-
   boot.matrix(sub_sampling, bootstraps = bootstraps, rarefaction = F)
-disparity_sampling <-
+disparity_sampling_sv <-
   dispRity(bootstrapped_data, metric = c(sum, variances))
-disp_sampling_sv <- summary(disparity_sampling)
+disp_sampling_sv <- summary(disparity_sampling_sv)
 
 # clades - SR
 
@@ -250,18 +250,18 @@ groups_clades <- Filter(function(x) { length(x) > 3 }, groups_clades)
 sub_clade <- custom.subsets(pcoa$vectors, groups_clades)
 bootstrapped_data <-
   boot.matrix(sub_clade, bootstraps = bootstraps, rarefaction = F)
-disparity_clade <-
+disparity_clade_sr <-
   dispRity(bootstrapped_data, metric = c(sum, ranges))
-disp_clade_sr <- summary(disparity_clade)
+disp_clade_sr <- summary(disparity_clade_sr)
 
 # samplings - SR
 
 sub_sampling <- custom.subsets(pcoa$vectors, groups_samplings)
 bootstrapped_data <-
   boot.matrix(sub_sampling, bootstraps = bootstraps, rarefaction = F)
-disparity_sampling <-
+disparity_sampling_sr <-
   dispRity(bootstrapped_data, metric = c(sum, ranges))
-disp_sampling_sr <- summary(disparity_sampling)
+disp_sampling_sr <- summary(disparity_sampling_sr)
 
 # saving
 
