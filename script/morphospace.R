@@ -223,7 +223,7 @@ bootstraps <- 1000
 
 set.seed(777)
 
-# clades
+# clades - SV
 
 groups_clades <- Filter(function(x) { length(x) > 3 }, groups_clades)
 
@@ -232,25 +232,44 @@ bootstrapped_data <-
   boot.matrix(sub_clade, bootstraps = bootstraps, rarefaction = F)
 disparity_clade <-
   dispRity(bootstrapped_data, metric = c(sum, variances))
-disp_clade <- summary(disparity_clade)
-wilcoxon_disp_clade <- test.dispRity(disparity_clade, 
-                                     wilcox.test, 
-                                     correction = "holm")
+disp_clade_sv <- summary(disparity_clade)
 
-# samplings
+# samplings - SV
 
 sub_sampling <- custom.subsets(pcoa$vectors, groups_samplings)
 bootstrapped_data <-
   boot.matrix(sub_sampling, bootstraps = bootstraps, rarefaction = F)
 disparity_sampling <-
   dispRity(bootstrapped_data, metric = c(sum, variances))
-disp_sampling <- summary(disparity_sampling)
-wilcoxon_disp_sampling <- test.dispRity(disparity_sampling, 
-                                     wilcox.test)
+disp_sampling_sv <- summary(disparity_sampling)
+
+# clades - SR
+
+groups_clades <- Filter(function(x) { length(x) > 3 }, groups_clades)
+
+sub_clade <- custom.subsets(pcoa$vectors, groups_clades)
+bootstrapped_data <-
+  boot.matrix(sub_clade, bootstraps = bootstraps, rarefaction = F)
+disparity_clade <-
+  dispRity(bootstrapped_data, metric = c(sum, ranges))
+disp_clade_sr <- summary(disparity_clade)
+
+# samplings - SR
+
+sub_sampling <- custom.subsets(pcoa$vectors, groups_samplings)
+bootstrapped_data <-
+  boot.matrix(sub_sampling, bootstraps = bootstraps, rarefaction = F)
+disparity_sampling <-
+  dispRity(bootstrapped_data, metric = c(sum, ranges))
+disp_sampling_sr <- summary(disparity_sampling)
 
 # saving
 
-list_of_datasets <- list("Disparity - Samplings" = disp_sampling, 
-                         "Disparity - Clades" = disp_clade)
-write.xlsx(list_of_datasets, file = "output/data/disparity_metric.xlsx")
+list_of_datasets_sv <- list("Disparity - Samplings" = disp_sampling_sv, 
+                         "Disparity - Clades" = disp_clade_sv)
+write.xlsx(list_of_datasets_sv, file = "output/data/sum_of_variances.xlsx")
+
+list_of_datasets_sr <- list("Disparity - Samplings" = disp_sampling_sr, 
+                         "Disparity - Clades" = disp_clade_sr)
+write.xlsx(list_of_datasets_sr, file = "output/data/sum_of_ranges.xlsx")
 

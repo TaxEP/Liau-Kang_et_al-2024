@@ -14,7 +14,7 @@ dat_clade <- read.csv("data/Mimosa_tree_data-Vasconcelos2020.csv",
 
 dat_pollen <- read.csv("data/pollen_data-mimosa.csv") %>%
   filter(genus == "Mimosa") %>%
-  select(cleaned_name)
+  select(cleaned_name, new_description)
 
 
 
@@ -161,9 +161,20 @@ write.csv(dat, "output/data/spp_clade_data.csv", row.names = F)
 
 #### Analyzing sampling ####
 
-## Percentage of tree taxa with pollen data
+## Percentage of tree taxa with pollen data (original)
 
-round(sum(!is.na(dat$pollen_data)) / length(dat$pollen_data) * 100,2)
+original_sampling <- dat_pollen %>%
+  filter(!new_description %in% "x")
+
+pollen_sampling <- dat %>%
+  filter(pollen_data == "yes")
+
+round(sum(original_sampling$cleaned_name %in% pollen_sampling$taxon) / 
+        length(tree$tip.label) * 100,2)
+
+## Percentage of tree taxa with pollen data (new description)
+
+round(sum(!is.na(dat$pollen_data)) / length(tree$tip.label) * 100,2)
 
 ## Number and name of matrix species not in the phylogeny
 
