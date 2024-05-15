@@ -164,13 +164,7 @@ morphospace <- ggplot(info_pollen, mapping = aes(x = PC1,
 
 dir.create("output/plots", showWarnings = F)
 
-jpeg(
-  filename = "output/plots/morphospace.jpeg",
-  width = c(174),
-  height = c(134),
-  units = "mm",
-  res = 600
-)
+pdf("output/plots/morphospace.pdf")
 
 morphospace
 
@@ -275,13 +269,7 @@ list_of_datasets_sr <- list("Disparity - Samplings" = disp_sampling_sr,
                          "Disparity - Clades" = disp_clade_sr)
 write.xlsx(list_of_datasets_sr, file = "output/data/sum_of_ranges.xlsx")
 
-jpeg(
-  filename = "output/plots/metrics.jpeg",
-  width = c(174),
-  height = c(134),
-  units = "mm",
-  res = 600
-)
+pdf("output/plots/metrics.pdf")
 
 par(mfrow=c(2,2), mar=c(2,2,1.5,0.5), xpd=TRUE)
 
