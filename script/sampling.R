@@ -36,6 +36,7 @@ dat_clade[311, 2] <- "Mimosa montis-carasae" #typo
 dat_clade[250, 2] <- "Mimosa invisa" #"accepted name" puts it as Mimosa invisa
 dat_clade[107, 4] <- "A" #typo
 tree$tip.label[281] <- "Mimosa invisa" #"accepted name" puts it as Mimosa invisa
+dat_clade$clade <- sub("V|W", "X", dat_clade$clade) #making clade X monophyletic
 
 tree <- drop.tip(tree, "Mimosa hirsutula") #name don't exist
 
