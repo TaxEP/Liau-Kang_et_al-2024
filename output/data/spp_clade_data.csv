@@ -35,7 +35,7 @@
 "Mimosa_barretoi","X",NA
 "Mimosa_bathyrrhena","X",NA
 "Mimosa_benthamii","B",NA
-"Mimosa_bifurca",NA,NA
+"Mimosa_bifurca","K",NA
 "Mimosa_bimucronata","D","yes"
 "Mimosa_bispiculata","O",NA
 "Mimosa_biuncifera","B",NA
@@ -43,7 +43,7 @@
 "Mimosa_boliviana","X",NA
 "Mimosa_borealis","B",NA
 "Mimosa_brachycarpa","L",NA
-"Mimosa_brevipetiolata_hirtula","U",NA
+"Mimosa_brevipetiolata_hirtula","X",NA
 "Mimosa_busseana","D",NA
 "Mimosa_caduca","B",NA
 "Mimosa_caerulea","X","yes"
@@ -117,7 +117,7 @@
 "Mimosa_farinosa","D",NA
 "Mimosa_fiebrigii","N","yes"
 "Mimosa_filipes","H","yes"
-"Mimosa_flagellaris","U",NA
+"Mimosa_flagellaris","X",NA
 "Mimosa_flocculosa","X",NA
 "Mimosa_foliolosa_brevibractea","O","yes"
 "Mimosa_foliolosa_foederalis","O",NA
@@ -257,7 +257,7 @@
 "Mimosa_polydactyla","P",NA
 "Mimosa_polydidyma","H",NA
 "Mimosa_prainiana","D",NA
-"Mimosa_procurrens","Z",NA
+"Mimosa_procurrens",NA,NA
 "Mimosa_prorepens","O","yes"
 "Mimosa_pseudocallosa","X",NA
 "Mimosa_pseudoradula","R",NA
@@ -286,7 +286,7 @@
 "Mimosa_robusta","G","yes"
 "Mimosa_rubicaulis_himalayana","D",NA
 "Mimosa_rufescens","A",NA
-"Mimosa_rufipila","Z",NA
+"Mimosa_rufipila",NA,NA
 "Mimosa_rusbyana","X",NA
 "Mimosa_sanguinolenta","K",NA
 "Mimosa_scabrella","X","yes"
