@@ -288,11 +288,15 @@ tree_plot <- ggtree(tree_data, branch.length = "none", right = T) +
                  color = "green", fill = "green", size = 5, shape = 17) +
   geom_text(aes(label = node.labels), hjust = 0.5, vjust = 0.5, 
             color = "black",size=3) +
-  geom_tippoint(aes(color=Pollen_data), size=3, alpha=.75) +
-  scale_color_brewer("Pollen_data", palette="Spectral") +
-  theme_tree2(legend.position='right')
+  geom_tippoint(aes(color=Pollen_data), size=0.4, alpha=1, shape = 15, show.legend = F) +
+  scale_color_brewer("Pollen_data", palette="Spectral")
 
-pdf("output/plots/tree_clades.pdf", height = 40)
+gheatmap(tree_plot, dat$Pollen_data, offset = 10, color=NULL, 
+         colnames_position="top", 
+         colnames_angle=90, colnames_offset_y = 1, 
+         hjust=0, font.size=2)
+
+pdf("output/plots/tree_clades.pdf")
 
 tree_plot
 
