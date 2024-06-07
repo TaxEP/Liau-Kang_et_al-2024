@@ -1,16 +1,21 @@
 ### MIMOSA POLLEN SAMPLING INFORMATIONS
 ## 04-06-2024
 
-#### Libraries and Reading data ####
+  #### 1. Libraries and data ####
 
+  # part. 2
 library(tidyverse)
 library(phytools)
 library(TNRS)
 library(ape)
-library(tidytree) 
+  # part. 3
+library(tidytree)
 library(data.table)
 library(ggtree)
 library(Claddis)
+  # part. 4
+library(dispRity)
+library(openxlsx)
 
 tree <- read.tree("data/mimosa_tree-Vasconcelos2020.tre")
 
@@ -25,30 +30,29 @@ dat_pollen <- read.csv("data/pollen_data-mimosa.csv") %>%
 
 #-----------------------------------------------------------------------------#
 
-
-
-#### Preparing data for sampling analysis ####
+  #### 2. Sampling Analyses ####
+##### Updating and cleaning data #####
 
 ## formatting tree and clade data to TNRS
 
-dat_clade$cleaned_name <- gsub("_", " ", dat_clade$cleaned_name, fixed = TRUE)
-
 tree$tip.label <- gsub("_", " ", tree$tip.label, fixed = TRUE)
+
+dat_clade$cleaned_name <- gsub("_", " ", dat_clade$cleaned_name, fixed = TRUE)
 
 # correcting errors
 
 dat_clade[311, 2] <- "Mimosa montis-carasae" #typo
 dat_clade[250, 2] <- "Mimosa invisa" #"accepted name" puts it as Mimosa invisa
-dat_clade[107, 4] <- "A" #typo
+dat_clade[107, 4] <- "NA" #clade unknown
 tree$tip.label[281] <- "Mimosa invisa" #"accepted name" puts it as Mimosa invisa
 dat_clade$clade <- sub("U|V|W", "X", dat_clade$clade) #removing X sub-clades
+dat_clade$clade <- sub("M", "L", dat_clade$clade) #removing L sub-clades
 dat_clade$clade <- sub("Z", NA, dat_clade$clade) #removing delimitation, it is
 # not from Simon (2011) and groups only 2 species
 
 tree <- drop.tip(tree, "Mimosa hirsutula") #name don't exist
 
-##### Updating and cleaning names #####
-
+### Updating and cleaning names
 dir.create("output/tnrs", showWarnings = F)
 
 #----------------------------#
@@ -139,7 +143,7 @@ setdiff(tree$tip.label, dat_clade$accepted_name)
 
 
 
-#### Generating analyses data
+##### Generating analyses data #####
 
 tree <- keep.tip(tree, tree$tip.label[grep("^Mimosa_", tree$tip.label)])
 
@@ -167,7 +171,7 @@ write.csv(dat, "output/data/spp_clade_data.csv", row.names = F)
 
 
 
-#### Analyzing sampling ####
+##### Analyzing sampling #####
 
 ## Percentage of tree taxa with pollen data (original)
 
@@ -207,12 +211,99 @@ write.csv(clades_percentages,
           "output/data/sampling-clade_percentages.csv",
           row.names = F)
 
-  #### DISPARITY ANALYSIS - MORPHOSPACE AND METRICS - MIMOSA POLLEN ####
+  #### 3. Tree plot (Fig. 1) ####
+
+## Marking clades
+
+tree_tibble <- as_tibble(tree)
+tree_tibble$node.labels <- NA
+
+tree_tibble$node.labels[
+  tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "A"])] <- "A"
+tree_tibble$node.labels[
+  tree_tibble$node == getMRCA(
+    tree, c("Mimosa_dichroa", "Mimosa_spirocarpa"))] <- "B"
+tree_tibble$node.labels[
+  tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "C"])] <- "C"
+tree_tibble$node.labels[
+  tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "D"])] <- "D"
+tree_tibble$node.labels[
+  tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "E"])] <- "E"
+tree_tibble$node.labels[
+  tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "F"])] <- "F"
+tree_tibble$node.labels[
+  tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "G"])] <- "G"
+tree_tibble$node.labels[
+  tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "H"])] <- "H"
+tree_tibble$node.labels[
+  tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "I"])] <- "I"
+tree_tibble$node.labels[
+  tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "J"])] <- "J"
+tree_tibble$node.labels[
+  tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "K"])] <- "K"
+tree_tibble$node.labels[
+  tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "L"])] <- "L"
+tree_tibble$node.labels[
+  tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "N"])] <- "N"
+tree_tibble$node.labels[
+  tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "O"])] <- "O"
+tree_tibble$node.labels[
+  tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "Q"])] <- "Q"
+tree_tibble$node.labels[
+  tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "R"])] <- "R"
+tree_tibble$node.labels[
+  tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "S"])] <- "S"
+tree_tibble$node.labels[
+  tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "T"])] <- "T"
+tree_tibble$node.labels[
+  tree_tibble$node == getMRCA(
+    tree, c("Mimosa_deamii", "Mimosa_macedoana"))] <- "X"
+tree_tibble$node.labels[
+  tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "Y"])] <- "Y"
+tree_tibble$node.labels[
+  tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "Z"])] <- "Z"
+
+## plotting tree
+
+c(tree_tibble$node.labels[!is.na(tree_tibble$node.labels)])
+clade_nodes <- tree_tibble[!is.na(tree_tibble$node.labels), "node"]
+
+dat$Pollen_data <- ifelse(dat$taxon %in% dat_pollen$cleaned_name, 
+                                 ifelse(dat_pollen$new_description[match(dat$taxon, dat_pollen$cleaned_name)] == "x", 
+                                        "New description", "Literature"), 
+                                 "Lacking")
+
+dat$Pollen_data[is.na(dat$Pollen_data)] <- "Literature"
+
+tree_tibble$Pollen_data <- NA
+
+tree_tibble$Pollen_data[1:358] <- dat$Pollen_data[1:358]
+
+tree_data <- as.treedata(tree_tibble)
+
+tree_plot <- ggtree(tree_data, branch.length = "none", right = T) + 
+  geom_nodepoint(aes(subset = node %in% clade_nodes$node[c(1,2,4,5,6,7,11,13,14,16,18)]), 
+                 color = "skyblue", fill = "skyblue", size = 5, shape = 16) +
+  geom_nodepoint(aes(subset = node %in% clade_nodes$node[c(3,8,9,10,12,15,17)]), 
+                 color = "green", fill = "green", size = 5, shape = 17) +
+  geom_text(aes(label = node.labels), hjust = 0.5, vjust = 0.5, 
+            color = "black",size=3) +
+  geom_tippoint(aes(color=Pollen_data), size=3, alpha=.75) +
+  scale_color_brewer("Pollen_data", palette="Spectral") +
+  theme_tree2(legend.position='right')
+
+pdf("output/plots/tree_clades.pdf", height = 40)
+
+tree_plot
+
+dev.off()
+
+  #### 4. Disparity Analyses ####
 
 dat_pollen <- read.csv("data/pollen_data-mimosa.csv", na.strings = c("NA")) %>%
   filter(genus == "Mimosa")
 
-#### Preparing data for disparity analysis ####
+##### Preparing data for disparity analysis #####
 
 ## creating dataframe with important information columns
 
@@ -288,7 +379,7 @@ matrix_pollen <- arules::discretizeDF(
   )
 )
 
-#### Disparity analysis - Morphospace ####
+##### Morphospace (Fig. 8A) #####
 
 # characters ordination
 
@@ -374,20 +465,13 @@ dev.off()
 
 
 
-#### Disparity analysis - Disparity Metrics ####
-
-library(dispRity)
-library(openxlsx)
-
-## reading clades data file
-
-clades_dat <- read.csv("output/data/spp_clade_data.csv")
+##### Disparity Metrics (Fig. 8B-E) #####
 
 ## creating lists grouping species of each clade
 ## (one list for before and other for after new descriptions)
 
 # adding clade information to info_pollen
-vectors_clades <- merge(info_pollen, clades_dat[, c("taxon", "clade")], 
+vectors_clades <- merge(info_pollen, dat_clade[, c("taxon", "clade")], 
              by.x = "cleaned_name", 
              by.y = "taxon", all.x = TRUE)
 
@@ -491,55 +575,3 @@ plot(disparity_clade_sr, yaxt = "n",
 
 dev.off()
 
-  #### TREE PLOT - CLADES AND POLLEN DATA ####
-
-plot(tree, show.tip.label = F)
-
-## Marking clades
-
-tree_tibble <- as_tibble(tree)
-tree_tibble$node.labels <- NA
-
-tree_tibble$node.labels[tree_tibble$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "A"]))] <- "A"
-tree_tibble$node.labels[tree_tibble$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "B"]))] <- "B"
-tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "C"]))] <- "C"
-tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "D"]))] <- "D"
-tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "E"]))] <- "E"
-tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "F"]))] <- "F"
-tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "G"]))] <- "G"
-tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "H"]))] <- "H"
-tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "I"]))] <- "I"
-tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "J"]))] <- "J"
-tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "K"]))] <- "K"
-tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "L"]))] <- "L"
-tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "M"]))] <- "M"
-tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "N"]))] <- "N"
-tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "O"]))] <- "O"
-tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "P"]))] <- "P"
-tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "Q"]))] <- "Q"
-tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "R"]))] <- "R"
-tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "S"]))] <- "S"
-tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "T"]))] <- "T"
-tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "U"]))] <- "U"
-tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "V"]))] <- "V"
-tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "W"]))] <- "W"
-tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "X"]))] <- "X"
-tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "Z"]))] <- "Z"
-
-tree_data <- as.treedata(tree)
-
-c(tree$node.labels[!is.na(tree$node.labels)])
-c(tree[!is.na(tree$node.labels),"node"])
-
-pdf("tree_clades.pdf")
-
-ggtree(tree_data, branch.length = "none") + 
-  geom_nodepoint(aes(subset = node %in% 
-                       c(390, 458, 471, 477, 501, 503, 524, 526, 535, 
-                         596, 604, 610, 612, 615, 634, 636, 646, 657,
-                         662, 663, 693, 748)), 
-                 color = "black", size = 5) +
-  geom_text(aes(label = node.labels), hjust = 0.5, vjust = 0.5, 
-            color = "white",size=3)
-
-dev.off()
