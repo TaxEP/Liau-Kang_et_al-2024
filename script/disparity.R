@@ -1,16 +1,218 @@
-### DISPARITY ANALYSIS - MORPHOSPACE AND METRICS - MIMOSA POLLEN
-## 05-10-2023
+### MIMOSA POLLEN SAMPLING INFORMATIONS
+## 04-06-2024
 
-#### Libraries and Data ####
+#### Libraries and Reading data ####
 
 library(tidyverse)
 library(phytools)
+library(TNRS)
+library(ape)
+library(tidytree) 
+library(data.table)
+library(ggtree)
 library(Claddis)
+
+tree <- read.tree("data/mimosa_tree-Vasconcelos2020.tre")
+
+dat_clade <- read.csv("data/Mimosa_tree_data-Vasconcelos2020.csv", 
+                      header = T, sep = ",")
+
+dat_pollen <- read.csv("data/pollen_data-mimosa.csv") %>%
+  filter(genus == "Mimosa") %>%
+  select(cleaned_name, new_description)
+
+
+
+#-----------------------------------------------------------------------------#
+
+
+
+#### Preparing data for sampling analysis ####
+
+## formatting tree and clade data to TNRS
+
+dat_clade$cleaned_name <- gsub("_", " ", dat_clade$cleaned_name, fixed = TRUE)
+
+tree$tip.label <- gsub("_", " ", tree$tip.label, fixed = TRUE)
+
+# correcting errors
+
+dat_clade[311, 2] <- "Mimosa montis-carasae" #typo
+dat_clade[250, 2] <- "Mimosa invisa" #"accepted name" puts it as Mimosa invisa
+dat_clade[107, 4] <- "A" #typo
+tree$tip.label[281] <- "Mimosa invisa" #"accepted name" puts it as Mimosa invisa
+dat_clade$clade <- sub("U|V|W", "X", dat_clade$clade) #removing X sub-clades
+dat_clade$clade <- sub("Z", NA, dat_clade$clade) #removing delimitation, it is
+# not from Simon (2011) and groups only 2 species
+
+tree <- drop.tip(tree, "Mimosa hirsutula") #name don't exist
+
+##### Updating and cleaning names #####
+
+dir.create("output/tnrs", showWarnings = F)
+
+#----------------------------#
+# LAST RUNNED IN: 04-06-2024 #
+#----------------------------#
+
+## getting updated tip labels on TNRS
+
+#resolved_tree_labels <- TNRS(tree$tip.label,
+#                           sources = c("wcvp"),
+#                           classification = "wfo",
+#                           mode = "resolve",
+#                           matches = "best",
+#                           accuracy = NULL,
+#                           skip_internet_check = FALSE)
+#write.csv(resolved_tree_labels, "output/tnrs/resolved_tree_labels.csv")
+
+## getting updated barneby data taxa on TNRS
+
+## getting updated clades data on TNRS
+
+#resolved_dat_clade <- TNRS(dat_clade$cleaned_name,
+#                            sources = c("wcvp"),
+#                            classification = "wfo",
+#                            mode = "resolve",
+#                            matches = "best",
+#                            accuracy = NULL,
+#                            skip_internet_check = FALSE)
+#write.csv(resolved_dat_clade, "output/tnrs/resolved_dat_clade.csv")
+
+## reading TNRS outputs
+
+resolved_tree_labels <- read.csv("output/tnrs/resolved_tree_labels.csv") %>%
+  select(
+    Name_submitted, Warnings, Name_matched, Taxonomic_status, Accepted_name)
+
+resolved_dat_clade <- read.csv("output/tnrs/resolved_dat_clade.csv") %>%
+  select(
+    Name_submitted, Warnings, Name_matched, Taxonomic_status, Accepted_name)
+
+## reviewing outputs
+
+updates_dat_clade <- resolved_dat_clade %>%
+  subset(Taxonomic_status != "Accepted" | Accepted_name == "Mimosa")
+
+updates_tree_labels <- resolved_tree_labels %>%
+  subset(Taxonomic_status != "Accepted" | Accepted_name == "Mimosa")
+
+## correcting, if necessary
+
+resolved_tree_labels[10, 5] = "Mimosa vernicosa var. ciliata"
+resolved_dat_clade[363, 5] = "Mimosa vernicosa var. ciliata"
+# "no opinion", but the name is accepted
+
+
+
+# removing "(double entry)" and duplicates of cleaned_name
+
+dat_clade$cleaned_name[duplicated(dat_clade$cleaned_name)]
+
+dat_clade <- dat_clade[!duplicated(dat_clade$cleaned_name), ]
+
+## cleaning accepted names and updating
+
+resolved_dat_clade <- resolved_dat_clade %>%
+  mutate(Accepted_name = gsub(" subsp\\.| var\\.|-", "", Accepted_name) %>%
+           gsub(" ", "_", .))
+
+resolved_tree_labels <- resolved_tree_labels %>%
+  mutate(Accepted_name = gsub(" subsp\\.| var\\.|-", "", Accepted_name) %>%
+           gsub(" ", "_", .))
+
+dat_clade$accepted_name <- resolved_dat_clade$Accepted_name
+tree$tip.label <- resolved_tree_labels$Accepted_name
+
+# removing duplicates of clade data
+
+dat_clade <- dat_clade[!duplicated(dat_clade$accepted_name), ]
+
+## checking if all tree species have clade data
+
+setdiff(tree$tip.label, dat_clade$accepted_name)
+# Mimosa eurystegia really don't have clade info... moving on
+
+
+
+#-----------------------------------------------------------------------------#
+
+
+
+#### Generating analyses data
+
+tree <- keep.tip(tree, tree$tip.label[grep("^Mimosa_", tree$tip.label)])
+
+dat <- as.data.frame(tree$tip.label)
+colnames(dat) <- "taxon"
+
+## adding clade information from Vasconcelos 2020 to data
+
+dat <- merge(dat, dat_clade[, c("accepted_name", "clade")], 
+             by.x = "taxon", 
+             by.y = "accepted_name", all.x = TRUE)
+
+## adding pollen sampling information to data
+
+dat <- dat %>%
+  mutate(pollen_data = ifelse(taxon %in% dat_pollen$cleaned_name, "yes", NA))
+
+## saving file for disparity analysis
+
+write.csv(dat, "output/data/spp_clade_data.csv", row.names = F)
+
+
+
+#-----------------------------------------------------------------------------#
+
+
+
+#### Analyzing sampling ####
+
+## Percentage of tree taxa with pollen data (original)
+
+original_sampling <- dat_pollen %>%
+  filter(!new_description %in% "x")
+
+pollen_sampling <- dat %>%
+  filter(pollen_data == "yes")
+
+round(sum(original_sampling$cleaned_name %in% pollen_sampling$taxon) / 
+        length(tree$tip.label) * 100,2)
+
+## Percentage of tree taxa with pollen data (new description)
+
+round(sum(!is.na(dat$pollen_data)) / length(tree$tip.label) * 100,2)
+
+## Number and name of matrix species not in the phylogeny
+
+length(setdiff(dat_pollen$cleaned_name, dat$taxon))
+
+setdiff(dat_pollen$cleaned_name, dat$taxon)
+
+dir.create("output/data", showWarnings = F)
+
+write.table(setdiff(dat_pollen$cleaned_name, dat$taxon), 
+            "output/data/taxa-data_not_tree.csv", 
+            col.names = FALSE, 
+            row.names = FALSE)
+
+## Percentage of pollen data for each tree clade
+
+clades_percentages <- dat %>%
+  group_by(clade) %>%
+  summarise(pollen_data = round(mean(!is.na(pollen_data)) * 100,2))
+
+write.csv(clades_percentages,
+          "output/data/sampling-clade_percentages.csv",
+          row.names = F)
+
+  #### DISPARITY ANALYSIS - MORPHOSPACE AND METRICS - MIMOSA POLLEN ####
 
 dat_pollen <- read.csv("data/pollen_data-mimosa.csv", na.strings = c("NA")) %>%
   filter(genus == "Mimosa")
 
-#### Preparing data for analysis ####
+#### Preparing data for disparity analysis ####
 
 ## creating dataframe with important information columns
 
@@ -90,7 +292,7 @@ matrix_pollen <- arules::discretizeDF(
 
 # characters ordination
 
-ord <- c("unord", "unord", "unord", "unord", "unord", "unord", "unord")
+ord <- c(rep("unordered",7))
 
 ## building cladistic matrix
 
@@ -286,5 +488,58 @@ plot(disparity_clade_sv,
      colors = clades_colors)
 plot(disparity_clade_sr, yaxt = "n", 
      colors = clades_colors)
+
+dev.off()
+
+  #### TREE PLOT - CLADES AND POLLEN DATA ####
+
+plot(tree, show.tip.label = F)
+
+## Marking clades
+
+tree_tibble <- as_tibble(tree)
+tree_tibble$node.labels <- NA
+
+tree_tibble$node.labels[tree_tibble$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "A"]))] <- "A"
+tree_tibble$node.labels[tree_tibble$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "B"]))] <- "B"
+tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "C"]))] <- "C"
+tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "D"]))] <- "D"
+tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "E"]))] <- "E"
+tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "F"]))] <- "F"
+tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "G"]))] <- "G"
+tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "H"]))] <- "H"
+tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "I"]))] <- "I"
+tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "J"]))] <- "J"
+tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "K"]))] <- "K"
+tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "L"]))] <- "L"
+tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "M"]))] <- "M"
+tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "N"]))] <- "N"
+tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "O"]))] <- "O"
+tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "P"]))] <- "P"
+tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "Q"]))] <- "Q"
+tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "R"]))] <- "R"
+tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "S"]))] <- "S"
+tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "T"]))] <- "T"
+tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "U"]))] <- "U"
+tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "V"]))] <- "V"
+tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "W"]))] <- "W"
+tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "X"]))] <- "X"
+tree$node.labels[tree$node == getMRCA(tree, c(clades_dat$taxon[clades_dat$clade == "Z"]))] <- "Z"
+
+tree_data <- as.treedata(tree)
+
+c(tree$node.labels[!is.na(tree$node.labels)])
+c(tree[!is.na(tree$node.labels),"node"])
+
+pdf("tree_clades.pdf")
+
+ggtree(tree_data, branch.length = "none") + 
+  geom_nodepoint(aes(subset = node %in% 
+                       c(390, 458, 471, 477, 501, 503, 524, 526, 535, 
+                         596, 604, 610, 612, 615, 634, 636, 646, 657,
+                         662, 663, 693, 748)), 
+                 color = "black", size = 5) +
+  geom_text(aes(label = node.labels), hjust = 0.5, vjust = 0.5, 
+            color = "white",size=3)
 
 dev.off()
