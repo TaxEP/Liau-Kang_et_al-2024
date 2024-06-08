@@ -1,140 +1,140 @@
-cleaned_name,source,sample,new_description,scientific_name_original,scientific_name_check,genus,specific_epithet,infraspecific_epithet,rank,grains,outline,pollen_arrangement,ornamentation,pore_number,longer_diameter_mean,shorter_diameter_mean,pore_diameter_mean,exine_thickness_mean,sexine_thickness_mean,nexine_thickness_mean
-Mimosa_acantholoba,Goicochea,59,x,Mimosa acantholoba ,Mimosa acantholoba,Mimosa,acantholoba,NA,Species,3,1,3,0,NA,24.3,8.45,0.157,0.209,NA,NA
-Mimosa_acutistipula,Santos-Silva et al. 2013,NA,NA,Mimosa acutistipula ,Mimosa acutistipula,Mimosa,acutistipula,NA,Species,3,1,3,4,NA,17.9,12.1,NA,NA,NA,NA
-Mimosa_acutistipula_acutistipula,Lima et al. 2008,NA,NA,Mimosa acutistipula var. acutistipula ,Mimosa acutistipula var. acutistipula,Mimosa,acutistipula,acutistipula,Variety,3,NA,3&5,0&4,NA,16.9,12.6,NA,1,NA,NA
-Mimosa_adenocarpa,Goicochea,37,x,Mimosa adenocarpa ,Mimosa adenocarpa,Mimosa,adenocarpa,NA,Species,2,0,0&5,0&4,1,14.466,11.067,0.715,0.438,NA,NA
-Mimosa_adenophylla,Santos-Silva et al. 2013,NA,NA,Mimosa adenophylla ,Mimosa adenophylla,Mimosa,adenophylla,NA,Species,2,1,NA,5,NA,22,15.5,NA,NA,NA,NA
-Mimosa_adenophylla_armandiana,Lima et al. 2008,NA,NA,Mimosa adenophylla var. armandiana ,Mimosa adenophylla var. armandiana,Mimosa,adenophylla,armandiana,Variety,1&2,NA,0&3,0&4,NA,21.5,16.4,NA,1,NA,NA
-Mimosa_adenophylla_mitis,Lima et al. 2008,NA,NA,Mimosa adenophylla var. mitis ,Mimosa adenophylla var. mitis,Mimosa,adenophylla,mitis,Variety,1&2,NA,0&3,0&4,NA,22,15.4,NA,1,NA,NA
-Mimosa_adenotricha,Goicochea,34,x,Mimosa adenotricha ,Mimosa adenotricha,Mimosa,adenotricha,NA,Species,2,1,0&4&5,0&4,1,16.338,11.936,0.946,0.338,NA,NA
-Mimosa_aguapeia,Goicochea,NA,x,Mimosa aguapeia ,Mimosa aguapeia,Mimosa,aguapeia,NA,Species,2,1,3,0,1,24.8,18.5,0.763,0.516,NA,NA
-Mimosa_albolanata_brasiliana,Goicochea,NA,x,Mimosa albolanata var. brasiliana ,Mimosa albolanata var. brasiliana,Mimosa,albolanata,brasiliana,Variety,2,1,0&3,0,1,20.4,13.1,0.745,0.495,NA,NA
-Mimosa_amnisatri,Santos-Silva et al. 2013,NA,NA,Mimosa amnis-atri ,Mimosa amnis-atri,Mimosa,amnis-atri,NA,Species,2,1,3,NA,NA,12.7,13.1,NA,NA,NA,NA
-Mimosa_apodocarpa,Santos-Silva et al. 2013,NA,NA,Mimosa apodocarpa ,Mimosa apodocarpa,Mimosa,apodocarpa,NA,Species,2,1,3,NA,NA,14.2,14.5,NA,NA,NA,NA
-Mimosa_arenosa,Buril et al. 2010 ,NA,NA,Mimosa arenosa ,Mimosa arenosa,Mimosa,arenosa,NA,Species,3,NA,3&4,NA,0&1&2,13.8,10.1,NA,NA,NA,NA
-Mimosa_arenosa_arenosa,Lima et al. 2008,NA,NA,Mimosa arenosa var. arenosa ,Mimosa arenosa var. arenosa,Mimosa,arenosa,arenosa,Variety,3,NA,3,0&4,NA,14.2,9.7,NA,1.2,NA,NA
-Mimosa_artemisiana,Santos-Silva et al. 2013,NA,NA,Mimosa artemisiana ,Mimosa artemisiana,Mimosa,artemisiana,NA,Species,2,1,NA,NA,NA,25,15.5,NA,NA,NA,NA
-Mimosa_aurivillus_aurivillus,Goicochea,26,x,Mimosa aurivillus var. aurivillus,Mimosa aurivillus var. aurivillus,Mimosa,aurivillus,aurivillus,Variety,2,0,0&5,4,NA,14.001,11.282,1.223,0.83,NA,NA
-Mimosa_bimucronata,de Freitas Cruz et al. 2018; Goicochea; Barth & Yoneshigue 1966; Barth 1973,30,NA,Mimosa bimucronata,Mimosa bimucronata,Mimosa,bimucronata,NA,Species,3,1,0&5,2&3&4,0&1,14.855,10.855,0.2,0.165,1.5,0.5
-Mimosa_bimucronata_bimucronata,Lima et al. 2008,NA,NA,Mimosa bimucronata var. bimucronata,Mimosa bimucronata var. bimucronata,Mimosa,bimucronata,bimucronata,Variety,3,NA,NA,0&4,NA,15.4,11.2,NA,1,NA,NA
-Mimosa_borboremae,Lima et al. 2008,NA,NA,Mimosa borboremae,Mimosa borboremae,Mimosa,borboremae,NA,Species,2,NA,0&5,0&4,0&1,11.9,8.7,NA,0.5,NA,NA
-Mimosa_caerulea,Medina-Acosta-2018,NA,NA,Mimosa caerulea,Mimosa caerulea,Mimosa,caerulea,NA,Species,2,0&1,5,1&2,0,14,NA,1.6,1.06,NA,NA
-Mimosa_caesalpiniifolia,Lima et al. 2008,NA,NA,Mimosa caesalpiniifolia,Mimosa caesalpiniifolia,Mimosa,caesalpiniifolia,NA,Species,3,NA,3,0&4,NA,12.9,9.8,NA,1,NA,NA
-Mimosa_calcicola,Medina-Acosta-2018,NA,NA,Mimosa calcicola,Mimosa calcicola,Mimosa,calcicola,NA,Species,3,1,3&4,1&2,0&1,16.73,12.88,0.8,0.9,NA,NA
-Mimosa_campicola_campicola,Lima et al. 2008,NA,NA,Mimosa campicola var. campicola,Mimosa campicola var. campicola,Mimosa,campicola,campicola,Variety,2,NA,0&3,0&4,0&1,29.5,23.7,NA,1,NA,NA
-Mimosa_candollei,Goicochea; Buril et al. 2010; Lima et al. 2008,23,NA,Mimosa candollei  / Mimosa quadrivalvis var. leptocarpa,Mimosa candollei,Mimosa,candollei,NA,Species,2,1&2,3&5,0&4,0&1,35.674,29.37,0.485,0.295,0.567,0.567
-Mimosa_capito,Goicochea,NA,x,Mimosa capito,Mimosa capito,Mimosa,capito,NA,Species,2,1,0,0,1,20.1,12.7,0.435,0.34,NA,NA
-Mimosa_ceratonia,de Freitas Cruz et al. 2018,NA,NA,Mimosa ceratonia,Mimosa ceratonia,Mimosa,ceratonia,NA,Species,5,NA,NA,2,NA,23.5,20.6,NA,2,1,1
-Mimosa_ceratonia_pseudoobovata,Goicochea,35,x,Mimosa ceratonia var. pseudo-obovata,Mimosa ceratonia var. pseudo-obovata,Mimosa,ceratonia,pseudo-obovata,Variety,2&3,1,5,0&2,NA,14.13,10.843,0.283,0.283,NA,NA
-Mimosa_claussenii_claussenii,Goicochea,NA,x,Mimosa claussenii var. claussenii ,Mimosa claussenii var. claussenii,Mimosa,claussenii,claussenii,Variety,2,1,0&4&5,0,1,16.25,13.75,0.515,0.39,NA,NA
-Mimosa_claussenii_claviceps,Goicochea,NA,x,Mimosa claussenii var. claviceps ,Mimosa claussenii var. claviceps,Mimosa,claussenii,claviceps,Variety,2,1,0,0,1,23,14.3,0.62,0.4,NA,NA
-Mimosa_claussenii_megistophylla,Goicochea,NA,x,Mimosa claussenii var. megistophylla,Mimosa claussenii var. megistophylla,Mimosa,claussenii,megistophylla,Variety,2,1,0,0,NA,20.4,12.9,0.585,0.45,NA,NA
-Mimosa_claussenii_prorsiseta,Goicochea,NA,x,Mimosa claussenii var. prorsiseta,Mimosa claussenii var. prorsiseta,Mimosa,claussenii,prorsiseta,Variety,2,1,0&4&5,0,NA,27.53,16.49,0.595,0.63,NA,NA
-Mimosa_cordistipula,Lima et al. 2008,NA,NA,Mimosa cordistipula ,Mimosa cordistipula,Mimosa,cordistipula,NA,Species,2,NA,0,0&4,NA,26.1,21.7,NA,1,NA,NA
-Mimosa_coruscocaesia,Santos-Silva et al. 2013,NA,NA,Mimosa coruscocaesia ,Mimosa coruscocaesia,Mimosa,coruscocaesia,NA,Species,2,1,3,NA,NA,19.7,13.8,NA,NA,NA,NA
-Mimosa_craspedisetosa,Santos-Silva et al. 2013,NA,NA,Mimosa craspedisetosa / Mimosa ferricola,Mimosa craspedisetosa,Mimosa,craspedisetosa,NA,Species,2,1,3,NA,NA,15.25,12.2,NA,NA,NA,NA
-Mimosa_cruenta,Goicochea,46,NA,Mimosa cruenta ,Mimosa cruenta,Mimosa,cruenta,NA,Species,2,1,5,1&2,NA,14.905,9.537,0.781,0.157,NA,NA
-Mimosa_daleoides,Medina-Acosta-2018,NA,NA,Mimosa daleoides ,Mimosa daleoides,Mimosa,daleoides,NA,Species,2,NA,4,4,1&2,32.54,31.27,3.55,1.57,NA,NA
-Mimosa_dalyi,Santos-Silva et al. 2013,NA,NA,Mimosa dalyi ,Mimosa dalyi,Mimosa,dalyi,NA,Species,2,1,3,NA,NA,15.6,13,NA,NA,NA,NA
-Mimosa_debilis_debilis,Lima et al. 2008,NA,NA,Mimosa debilis var. debilis ,Mimosa debilis var. debilis,Mimosa,debilis,debilis,Variety,2,NA,0&5,0,NA,10.7,10.2,NA,0.8,NA,NA
-Mimosa_dichroa,Santos-Silva et al. 2013,NA,NA,Mimosa dichroa ,Mimosa dichroa,Mimosa,dichroa,NA,Species,3,1,4,NA,NA,10.5,8.9,NA,NA,NA,NA
-Mimosa_diplotricha_diplotricha,Goicochea,26,x,Mimosa diplotricha var. diplotricha ,Mimosa diplotricha var. diplotricha,Mimosa,diplotricha,diplotricha,Variety,2,1,3,1,NA,34.061,25.966,1.357,1.086,NA,NA
-Mimosa_dolens_dolens,Goicochea,63,NA,Mimosa dolens var. dolens,Mimosa dolens var. dolens,Mimosa,dolens,dolens,Variety,2,0,5,4,NA,13.169,11.988,0.264,0.268,NA,NA
-Mimosa_dryandroides,Goicochea,39,x,Mimosa dryandoides ,Mimosa dryandroides,Mimosa,dryandroides,NA,Species,2,1,0&5,0&4,NA,13.117,8.682,0.596,0.239,NA,NA
-Mimosa_elliptica,de Freitas Cruz et al. 2018,NA,NA,Mimosa elliptica ,Mimosa elliptica,Mimosa,elliptica,NA,Species,3,NA,3,2,0&1,27.8,22,NA,2,1,1
-Mimosa_ephedroides,Caccavari 2002,NA,NA,Mimosa ephedroides ,Mimosa ephedroides,Mimosa,ephedroides,NA,Species,3,2,4,NA,NA,18,NA,NA,NA,NA,NA
-Mimosa_exalbescens,Lima et al. 2008,NA,NA,Mimosa exalbescens ,Mimosa exalbescens,Mimosa,exalbescens,NA,Species,3,NA,NA,0&4,NA,13.8,10.5,NA,0.5,NA,NA
-Mimosa_fiebrigii,Santos-Silva et al. 2013,NA,NA,Mimosa fiebrigii ,Mimosa fiebrigii,Mimosa,fiebrigii,NA,Species,2,1,3,NA,NA,17.1,14.5,NA,NA,NA,NA
-Mimosa_filipes,Lima et al. 2008,NA,NA,Mimosa filipes ,Mimosa filipes,Mimosa,filipes,NA,Species,2,NA,0,0&4,0&1,21.7,20.5,NA,1.1,NA,NA
-Mimosa_floridana,Flores-Cruz - 2006,NA,NA,Mimosa quadrivalvis var. floridana ,Mimosa floridana,Mimosa,floridana,NA,Species,2,1,NA,4,NA,28,25,1.3,1.3,NA,NA
-Mimosa_foliolosa_brevibractea,Goicochea,NA,x,Mimosa foliolosa var. brevibractea ,Mimosa foliolosa var. brevibractea,Mimosa,foliolosa,brevibractea,Variety,2,1,0&3,0,1,20.1,13,0.55,0.36,NA,NA
-Mimosa_foliolosa_franciscana,Goicochea,NA,x,Mimosa foliolosa var. franciscana ,Mimosa foliolosa var. franciscana,Mimosa,foliolosa,franciscana,Variety,2,1,0&3,0,1,20.6,12.5,0.495,0.42,NA,NA
-Mimosa_foliolosa_multipinna,Goicochea,NA,x,Mimosa foliolosa var. multipinna ,Mimosa foliolosa var. multipinna,Mimosa,foliolosa,multipinna,Variety,2,1,0&3,0,1,19.7,13.1,0.59,0.5,NA,NA
-Mimosa_foliolosa_pachycarpa,Goicochea,32,x,Mimosa foliolosa var. pachycarpa ,Mimosa foliolosa var. pachycarpa,Mimosa,foliolosa,pachycarpa,Variety,2,1,3,0,NA,18.019,13.474,0.415,0.37,NA,NA
-Mimosa_foliolosa_paranani,Goicochea,10,x,Mimosa foliolosa var. paranani ,Mimosa foliolosa var. paranani,Mimosa,foliolosa,paranani,Variety,2,1,3&5,0&1,NA,20.16,12.96,0.31,0.28,NA,NA
-Mimosa_foliolosa_pubescens,Goicochea,"41, 64",x,Mimosa foliolosa var. pubescens ,Mimosa foliolosa var. pubescens,Mimosa,foliolosa,pubescens,Variety,2,1,3&5,0&1,NA,19.138,13.304,0.84,0.33,NA,NA
-Mimosa_foliolosa_vernicosa,Goicochea,NA,x,Mimosa foliolosa var. vernicosa ,Mimosa foliolosa var. vernicosa,Mimosa,foliolosa,vernicosa,Species,2,1,0&4&5,0,1,18.8,12.12,0.7,0.42,NA,NA
-Mimosa_foliolosa_viscidula,Goicochea,NA,x,Mimosa foliolosa var. viscidula ,Mimosa foliolosa var. viscidula,Mimosa,foliolosa,viscidula,Variety,2,1,0,0,1,20.6,13,0.7,0.81,NA,NA
-Mimosa_gracilis_capillipes,Goicochea,NA,x,Mimosa gracilis var. capillipes,Mimosa gracilis var. capillipes,Mimosa,gracilis,capillipes,Variety,2,1,0&3,0&4,NA,23.78,16.95,0.65,0.4,NA,NA
-Mimosa_gemmulata,Goicochea; Lima et al. 2008; Santos-Silva et al. 2013,NA,NA,Mimosa gemmulata ,Mimosa gemmulata,Mimosa,gemmulata,NA,Species,2,1,0&4&5,0&4,NA,21.143,15.617,0.36,0.39,NA,NA
-Mimosa_glutinosa,Santos-Silva et al. 2013,NA,NA,Mimosa glutinosa ,Mimosa glutinosa,Mimosa,glutinosa,NA,Species,2,1,3,NA,NA,18.5,12.8,NA,NA,NA,NA
-Mimosa_guilandinae_extensissima,Caccavari 2002,NA,NA,Mimosa guilandinae var. extensissima ,Mimosa guilandinae var. extensissima,Mimosa,guilandinae,extensissima,Variety,5,1,1,0,NA,23,NA,NA,NA,NA,NA
-Mimosa_hapaloclada,Santos-Silva et al. 2013,NA,NA,Mimosa hapaloclada ,Mimosa hapaloclada,Mimosa,hapaloclada,NA,Species,3,1,NA,NA,NA,22.1,15.5,NA,NA,NA,NA
-Mimosa_hebecarpa,Santos-Silva et al. 2013,NA,NA,Mimosa hebecarpa ,Mimosa hebecarpa,Mimosa,hebecarpa,NA,Species,2,1,3,NA,NA,18.1,14,NA,NA,NA,NA
-Mimosa_hexandra,Lima et al. 2008,NA,NA,Mimosa hexandra ,Mimosa hexandra,Mimosa,hexandra,NA,Species,3,NA,NA,0&4,NA,14.6,10.9,NA,0.5,NA,NA
-Mimosa_honesta,Goicochea,NA,x,Mimosa honesta,Mimosa honesta,Mimosa,honesta,NA,Species,2,0,0&3,0&4,NA,7.88,6.78,0.215,0.21,NA,NA
-Mimosa_hystricina,Flores-Cruz - 2006,NA,NA,Mimosa hystricina ,Mimosa hystricina,Mimosa,hystricina,NA,Species,2,1,0,4,NA,27,24,1.3,1.3,NA,NA
-Mimosa_insignis,Santos-Silva et al. 2013,NA,NA,Mimosa insignis ,Mimosa insignis,Mimosa,insignis,NA,Species,2,1,3,NA,NA,16.6,12.5,NA,NA,NA,NA
-Mimosa_interrupta,Santos-Silva et al. 2013,NA,NA,Mimosa interrupta ,Mimosa interrupta,Mimosa,interrupta,NA,Species,2,1,3,NA,NA,17.5,10.5,NA,NA,NA,NA
-Mimosa_invisa,Buril et al. 2010; Lima et al. 2008,NA,NA,Mimosa invisa ,Mimosa invisa,Mimosa,invisa,NA,Species,2,1&2,0&3,0&4,1,22.233,18.033,NA,1.2,NA,NA
-Mimosa_invisa_macrostachya,Goicochea,36,NA,Mimosa invisa var. macrostachya ,Mimosa invisa var. macrostachya,Mimosa,invisa,macrostachya,Variety,2,1,3,0,NA,23.787,16.959,0.63,0.338,NA,NA
-Mimosa_irrigua,Lima et al. 2008,NA,NA,Mimosa irrigua ,Mimosa irrigua,Mimosa,irrigua,NA,Species,3,NA,NA,0&4,NA,18.5,13.1,NA,1,NA,NA
-Mimosa_laniceps,Goicochea,NA,x,Mimosa laniceps ,Mimosa laniceps,Mimosa,laniceps,NA,Species,2,1,0,0,1,21,13.5,0.885,0.45,NA,NA
-Mimosa_laticifera,Goicochea; Barth - 1973,45,NA,Mimosa laticifera ,Mimosa laticifera,Mimosa,laticifera,NA,Species,3,NA,3,4,0&1,20.403,15.572,0.713,0.313,NA,NA
-Mimosa_latidens,Flores-Cruz - 2006,NA,NA,Mimosa latidens ,Mimosa latidens,Mimosa,latidens,NA,Species,2,1,0,4,NA,33,30,1.3,1.3,NA,NA
-Mimosa_lepidophora,Lima et al. 2008,NA,NA,Mimosa lepidophora ,Mimosa lepidophora,Mimosa,lepidophora,NA,Species,4,NA,1,0,NA,22.7,18.6,NA,1.1,NA,NA
-Mimosa_lewisii,Lima et al. 2008,NA,NA,Mimosa lewisii ,Mimosa lewisii,Mimosa,lewisii,NA,Species,2,NA,0,0&4,NA,23.5,17.1,NA,1.1,NA,NA
-Mimosa_maguirei,Goicochea,NA,x,Mimosa maguirei ,Mimosa maguirei,Mimosa,maguirei,NA,Species,2,1,0&5,0,1,19.7,13.1,0.67,0.49,NA,NA
-Mimosa_manidea,Goicochea,4,x,Mimosa manidea,Mimosa manidea,Mimosa,manidea,NA,Species,2,1,0&5,0,1,15.647,9.976,0.324,0.15,NA,NA
-Mimosa_mensicola,Lima et al. 2008; Santos-Silva et al. 2013,NA,NA,Mimosa mensicola,Mimosa mensicola,Mimosa,mensicola,NA,Species,3,1,NA,0&4,NA,14.75,11.4,NA,1,NA,NA
-Mimosa_misera,Lima et al. 2008,NA,NA,Mimosa misera ,Mimosa misera,Mimosa,misera,NA,Species,2,NA,3,0&4,NA,25.9,20.1,NA,1.1,NA,NA
-Mimosa_modesta,Lima et al. 2008,NA,NA,Mimosa modesta ,Mimosa modesta,Mimosa,modesta,NA,Species,2,NA,0&5,0,NA,9.9,9.3,NA,0.7,NA,NA
-Mimosa_morroensis,Lima et al. 2008,NA,NA,Mimosa morröensis ,Mimosa morroensis,Mimosa,morroensis,NA,Species,2,NA,0&5,0&4,0&1,11,9,NA,0.6,NA,NA
-Mimosa_myrioglandulosa,Goicochea,11,x,Mimosa myrioglandulosa ,Mimosa myrioglandulosa,Mimosa,myrioglandulosa,NA,Species,2,1,3&4,0,NA,16.75,11.292,0.393,0.257,NA,NA
-Mimosa_nothopteris,Santos-Silva et al. 2013,NA,NA,Mimosa nothopteris ,Mimosa nothopteris,Mimosa,nothopteris,NA,Species,2,1,NA,NA,NA,16.5,13,NA,NA,NA,NA
-Mimosa_obstrigosa,Caccavari 2002,NA,NA,Mimosa obstrigosa ,Mimosa obstrigosa,Mimosa,obstrigosa,NA,Species,2,NA,5,NA,NA,10,NA,NA,NA,NA,NA
-Mimosa_occidentalis,Medina-Acosta-2018,NA,NA,Mimosa occidentalis ,Mimosa occidentalis,Mimosa,occidentalis,NA,Species,2,0&1,5,1,0,15.1,10,0.75,0.87,NA,NA
-Mimosa_oedoclada,Goicochea,1,x,Mimosa oedoclada ,Mimosa oedoclada,Mimosa,oedoclada,NA,Species,2,1,3&5,0,NA,16.551,10.879,0.498,0.541,NA,NA
-Mimosa_ophthalmocentra,Buril et al. 2010; Lima et al. 2008; Santos-Silva et al. 2013,NA,NA,Mimosa ophthalmocentra,Mimosa ophthalmocentra,Mimosa,ophthalmocentra,NA,Species,3,1,4,0&4,0&1&2,13.8,9.875,NA,0.6,NA,NA
-Mimosa_paludosa,Goicochea; Lima et al. 2008,12,NA,Mimosa paludosa / Mimosa setosa var. paludosa,Mimosa paludosa,Mimosa,paludosa,NA,Species,2,1,0&5,0&4,1,22.55,15.5,0.905,0.79,NA,NA
-Mimosa_papposa,Caccavari 2002,NA,NA,Mimosa papposa ,Mimosa papposa,Mimosa,papposa,NA,Species,2,NA,4&5,NA,NA,12,NA,NA,NA,NA,NA
-Mimosa_paraibana,Lima et al. 2008,NA,NA,Mimosa paraibana ,Mimosa paraibana,Mimosa,paraibana,NA,Species,3,NA,NA,0&4,NA,13.8,10.2,NA,0.5,NA,NA
-Mimosa_pigra,Lima et al. 2008,NA,NA,Mimosa pigra ,Mimosa pigra,Mimosa,pigra,NA,Species,2,NA,0&3,NA,NA,25.7,18.1,NA,1,NA,NA
-Mimosa_pigra_dehiscens,Goicochea,43,NA,Mimosa pigra var. dehiscens  / Mimosa pigra,Mimosa pigra var. dehiscens,Mimosa,pigra,dehiscens,Variety,2,1,0&3,0&4,1,22.289,16.703,0.823,0.372,NA,NA
-Mimosa_piresii,Goicochea,NA,x,Mimosa piresii ,Mimosa piresii,Mimosa,piresii,NA,Species,2,1,0&3,0,1,20.4,14.9,NA,NA,NA,NA
-Mimosa_pithecolobioides,Lima et al. 2008; Goicochea,NA,NA,Mimosa pithecolobioides,Mimosa pithecolobioides,Mimosa,pithecolobioides,NA,Species,4,1,1,0,NA,23.174,16.969,0.313,0.307,NA,NA
-Mimosa_pringlei_pringlei,Medina-Acosta-2018,NA,NA,Mimosa pringlei var. pringlei ,Mimosa pringlei var. pringlei,Mimosa,pringlei,pringlei,Variety,3,1,4,1,0&1,16.56,12.61,0.76,0.87,NA,NA
-Mimosa_prorepens,Goicochea,NA,x,Mimosa prorepens ,Mimosa prorepens,Mimosa,prorepens,NA,Species,2,1,0&5,0,1,16.9,11.8,0.49,0.47,NA,NA
-Mimosa_pseudosepiaria,Lima et al. 2008,NA,NA,Mimosa pseudosepiaria ,Mimosa pseudosepiaria,Mimosa,pseudosepiaria,NA,Species,3,NA,NA,0&4,NA,14.9,10.4,NA,0.5,NA,NA
-Mimosa_pteridifolia,Goicochea; Santos-Silva et al. 2013,3,NA,Mimosa pteridifolia,Mimosa pteridifolia,Mimosa,pteridifolia,NA,Species,1&2,1,4&5,1,NA,20.346,14.655,0.374,0.284,NA,NA
-Mimosa_pudica,Lima et al. 2008,NA,NA,Mimosa pudica ,Mimosa pudica,Mimosa,pudica,NA,Species,2,NA,0&5,0,NA,10.4,10.1,NA,0.5,NA,NA
-Mimosa_quadrivalvis_angustata,Flores-Cruz - 2006,NA,NA,Mimosa quadrivalvis var. angustata ,Mimosa quadrivalvis var. angustata,Mimosa,quadrivalvis,angustata,Variety,2,1,0,4,NA,30,27,1.3,1.3,NA,NA
-Mimosa_quadrivalvis_diffusa,Flores-Cruz - 2006,NA,NA,Mimosa quadrivalvis var. diffusa ,Mimosa quadrivalvis var. diffusa,Mimosa,quadrivalvis,diffusa,Variety,2,1,0,4,NA,31,28,1.3,1.3,NA,NA
-Mimosa_quadrivalvis_jaliscensis,Flores-Cruz - 2006,NA,NA,Mimosa quadrivalvis var. jaliscensis ,Mimosa quadrivalvis var. jaliscensis,Mimosa,quadrivalvis,jaliscensis,Variety,2,1,0,4,NA,36,30,1.3,1.3,NA,NA
-Mimosa_quadrivalvis_nuttallii,Flores-Cruz - 2006,NA,NA,Mimosa nuttallii ,Mimosa quadrivalvis var. nuttallii,Mimosa,quadrivalvis,nuttallii,Variety,2,1,0,4,NA,29,26,1.3,1.3,NA,NA
-Mimosa_quadrivalvis_occidentalis,Flores-Cruz - 2006,NA,NA,Mimosa rupertiana ,Mimosa quadrivalvis var. occidentalis,Mimosa,quadrivalvis,occidentalis,Variety,2,1,0,1,NA,30,27,1.3,1.3,NA,NA
-Mimosa_quadrivalvis_paucijuga,Flores-Cruz - 2006,NA,NA,Mimosa paucijuga ,Mimosa quadrivalvis var. paucijuga,Mimosa,quadrivalvis,paucijuga,Variety,2,1,0,4,NA,35,30,0.6,0.6,NA,NA
-Mimosa_quadrivalvis_platycarpa,Flores-Cruz - 2006,NA,NA,Mimosa roemeriana ,Mimosa quadrivalvis var. platycarpa,Mimosa,quadrivalvis,platycarpa,Variety,2,1,0,1,NA,33,29,1.3,1.3,NA,NA
-Mimosa_quadrivalvis_quadrivalvis,Flores-Cruz - 2006,NA,NA,Mimosa quadrivalvis var. quadrivalvis ,Mimosa quadrivalvis var. quadrivalvis,Mimosa,quadrivalvis,quadrivalvis,Variety,2,1,0,4,NA,35,32,1.3,1.3,NA,NA
-Mimosa_quadrivalvis_urbaniana,Flores-Cruz - 2006,NA,NA,Mimosa quadrivalvis var. urbaniana ,Mimosa quadrivalvis var. urbaniana,Mimosa,quadrivalvis,urbaniana,Variety,2,1,0,1,NA,28,25,NA,NA,NA,NA
-Mimosa_regnellii_supersetosa,Caccavari 2002,NA,NA,Mimosa regnelli var. supercetosa ,Mimosa regnellii var. supersetosa,Mimosa,regnellii,supersetosa,Variety,2,NA,NA,4,NA,27,NA,NA,NA,NA,NA
-Mimosa_rhodostegia,Goicochea,NA,x,Mimosa rhodostegia ,Mimosa rhodostegia,Mimosa,rhodostegia,NA,Species,2,1,0&3,0,1,20.7,13.4,0.65,0.65,NA,NA
-Mimosa_robusta,Flores-Cruz - 2006,NA,NA,Mimosa robusta ,Mimosa robusta,Mimosa,robusta,NA,Species,2,1,0,4,NA,47,39,1.3,1.3,NA,NA
-Mimosa_rupigena,Goicochea,NA,x,Mimosa setosa var. rupigena ,Mimosa rupigena,Mimosa,rupigena,NA,Species,2,1,0&3,0,1,19.5,13.4,0.59,0.69,NA,NA
-Mimosa_scabrella,Goicochea; Bauermann et al. 2009,27,NA,Mimosa scabrella,Mimosa scabrella,Mimosa,scabrella,NA,Species,2,2,0&5,6,1,13.49,9.575,0.604,0.772,NA,NA
-Mimosa_schomburgkii,Santos-Silva et al. 2013,NA,NA,Mimosa schomburgkii ,Mimosa schomburgkii,Mimosa,schomburgkii,NA,Species,1&2,1,4&5,NA,NA,30,16.1,NA,NA,NA,NA
-Mimosa_sensitiva,Buril et al. 2010,NA,NA,Mimosa sensitiva,Mimosa sensitiva,Mimosa,sensitiva,NA,Species,2,NA,5,0,1,8.65,NA,NA,NA,NA,NA
-Mimosa_sensitiva_sensitiva,Lima et al. 2008,NA,NA,Mimosa sensitiva var. sensitiva ,Mimosa sensitiva var. sensitiva,Mimosa,sensitiva,sensitiva,Variety,2,NA,0&5,0,NA,8.8,8.3,NA,1,NA,NA
-Mimosa_sericantha,Santos-Silva et al. 2013,NA,NA,Mimosa sericantha ,Mimosa sericantha,Mimosa,sericantha,NA,Species,2,1,3&5,NA,NA,23,11.9,NA,NA,NA,NA
-Mimosa_setosissima,Goicochea,NA,x,Mimosa setosissima ,Mimosa setosissima,Mimosa,setosissima,NA,Species,2,1,0&5,0,1,17.2,12.1,0.46,0.51,NA,NA
-Mimosa_setuligera,Lima et al. 2008,NA,NA,Mimosa setuligera ,Mimosa setuligera,Mimosa,setuligera,NA,Species,2,NA,5,0&4,0&1,12.7,10.9,NA,1,NA,NA
-Mimosa_somnians_somnians,Lima et al. 2008,NA,NA,Mimosa somnians var. somnians ,Mimosa somnians var. somnians,Mimosa,somnians,somnians,Variety,2,NA,0&3,0&4,NA,20.1,12.5,NA,1,NA,NA
-Mimosa_sousae,Medina-Acosta-2018,NA,NA,Mimosa sousae ,Mimosa sousae,Mimosa,sousae,NA,Species,2,0&1,5,1&2,0,14.67,10.33,1.63,1.04,NA,NA
-Mimosa_spirocarpa,Medina-Acosta-2018,NA,NA,Mimosa spirocarpa ,Mimosa spirocarpa,Mimosa,spirocarpa,NA,Species,3,1,5,1&2,0&1,13.68,10.53,0.75,0.87,NA,NA
-Mimosa_spixiana,Santos-Silva et al. 2013,NA,NA,Mimosa spixiana ,Mimosa spixiana,Mimosa,spixiana,NA,Species,2,1,0&5,NA,NA,18.2,16,NA,NA,NA,NA
-Mimosa_strobiliflora,Goicochea,31,x,Mimosa strobiflora ,Mimosa strobiliflora,Mimosa,strobiliflora,NA,Species,2,1,0&3,4,NA,20.16,13.784,1.124,0.333,NA,NA
-Mimosa_subenervis,Lima et al. 2008,NA,NA,Mimosa subenervis ,Mimosa subenervis,Mimosa,subenervis,NA,Species,2,NA,0,0&4,0&1,28.5,21.7,NA,1,NA,NA
-Mimosa_subinermis,Flores-Cruz - 2006,NA,NA,Mimosa subinermis,Mimosa subinermis,Mimosa,subinermis,NA,Species,2,1,0,NA,NA,30,26,NA,NA,NA,NA
-Mimosa_taimbensis,Barth & Yoneshigue 1966,NA,NA,Mimosa taimbensis,Mimosa taimbensis,Mimosa,taimbensis,NA,Species,2,0,0,3,2,19,11.9,1.7,1.2,NA,0.8
-Mimosa_tandilensis,Caccavari 2002,NA,NA,Mimosa tandilensis ,Mimosa tandilensis,Mimosa,tandilensis,NA,Species,2,1,NA,4,NA,31,NA,NA,NA,NA,NA
-Mimosa_tenuiflora,Buril et al. 2010; Lima et al. 2008; Santos-Silva et al. 2013; Goicochea,47,NA,Mimosa tenuiflora,Mimosa tenuiflora,Mimosa,tenuiflora,NA,Species,2,NA,0&5,0&5,1,20.373,14.063,0.355,0.505,NA,NA
-Mimosa_tetragona,Flores-Cruz - 2006,NA,NA,Mimosa tetragona ,Mimosa tetragona,Mimosa,tetragona,NA,Species,2,1,0,1,NA,30,25,NA,NA,NA,NA
-Mimosa_trianae,Santos-Silva et al. 2013,NA,NA,Mimosa trianae ,Mimosa trianae,Mimosa,trianae,NA,Species,1&2,1,NA,NA,NA,15.5,14,NA,NA,NA,NA
-Mimosa_ulbrichiana,Lima et al. 2008,NA,NA,Mimosa ulbrichiana ,Mimosa ulbrichiana,Mimosa,ulbrichiana,NA,Species,2,NA,0&3,0&4,0&1,26.8,20.5,NA,1,NA,NA
-Mimosa_ulei_ulei,Goicochea,NA,x,Mimosa ulei var. ulei ,Mimosa ulei var. ulei,Mimosa,ulei,ulei,Variety,2,1,0&5,0,1,18.4,11.4,0.3,0.57,NA,NA
-Mimosa_ursina,Lima et al. 2008,NA,NA,Mimosa ursina,Mimosa ursina,Mimosa,ursina,NA,Species,0&1,NA,NA,0,0,18.15,16,3.6,1.7,NA,NA
-Mimosa_velloziana,Lima et al. 2008,NA,NA,Mimosa velloziana ,Mimosa velloziana,Mimosa,velloziana,NA,Species,2,NA,0&5,0,NA,10.4,9.9,NA,0.5,NA,NA
-Mimosa_verrucosa,Lima et al. 2008; Santos-Silva et al. 2013,NA,NA,Mimosa verrucosa,Mimosa verrucosa,Mimosa,verrucosa,NA,Species,2,1,0,0&4,NA,19.1,13.65,NA,1,NA,NA
-Mimosa_watsonii,Medina-Acosta-2018,NA,NA,Mimosa watsonii ,Mimosa watsonii,Mimosa,watsonii,NA,Species,4,1,2,1&2,0,20.7,14.54,0.86,0.75,NA,NA
-Mimosa_xavantinae,Santos-Silva et al. 2013,NA,NA,Mimosa xavantinae ,Mimosa xavantinae,Mimosa,xavantinae,NA,Species,2,1,NA,NA,NA,14.5,13,NA,NA,NA,NA
-Mimosa_xiquexiquensis,Lima et al. 2008,NA,NA,Mimosa xiquexiquensis ,Mimosa xiquexiquensis,Mimosa,xiquexiquensis,NA,Species,2,NA,0&5,0&4,0&1,16.6,13,NA,0.5,NA,NA
+"cleaned_name","source","sample","new_description","scientific_name_original","scientific_name_check","genus","specific_epithet","infraspecific_epithet","rank","grains","outline","pollen_arrangement","ornamentation","pore_number","longer_diameter_mean","shorter_diameter_mean","pore_diameter_mean","exine_thickness_mean","sexine_thickness_mean","nexine_thickness_mean"
+"Mimosa_acantholoba","Liau-Kang","59","x","Mimosa acantholoba ","Mimosa acantholoba","Mimosa","acantholoba",NA,"Species","3","1","3","0",NA,24.3,8.45,0.157,0.209,NA,NA
+"Mimosa_acutistipula","Santos-Silva et al. 2013",NA,NA,"Mimosa acutistipula ","Mimosa acutistipula","Mimosa","acutistipula",NA,"Species","3","1","3","4",NA,17.9,12.1,NA,NA,NA,NA
+"Mimosa_acutistipula_acutistipula","Lima et al. 2008",NA,NA,"Mimosa acutistipula var. acutistipula ","Mimosa acutistipula var. acutistipula","Mimosa","acutistipula","acutistipula","Variety","3",NA,"3&5","0&4",NA,16.9,12.6,NA,1,NA,NA
+"Mimosa_adenocarpa","Liau-Kang","37","x","Mimosa adenocarpa ","Mimosa adenocarpa","Mimosa","adenocarpa",NA,"Species","2","0","0&5","0&4","1",14.466,11.067,0.715,0.438,NA,NA
+"Mimosa_adenophylla","Santos-Silva et al. 2013",NA,NA,"Mimosa adenophylla ","Mimosa adenophylla","Mimosa","adenophylla",NA,"Species","2","1",NA,"5",NA,22,15.5,NA,NA,NA,NA
+"Mimosa_adenophylla_armandiana","Lima et al. 2008",NA,NA,"Mimosa adenophylla var. armandiana ","Mimosa adenophylla var. armandiana","Mimosa","adenophylla","armandiana","Variety","1&2",NA,"0&3","0&4",NA,21.5,16.4,NA,1,NA,NA
+"Mimosa_adenophylla_mitis","Lima et al. 2008",NA,NA,"Mimosa adenophylla var. mitis ","Mimosa adenophylla var. mitis","Mimosa","adenophylla","mitis","Variety","1&2",NA,"0&3","0&4",NA,22,15.4,NA,1,NA,NA
+"Mimosa_adenotricha","Liau-Kang","34","x","Mimosa adenotricha ","Mimosa adenotricha","Mimosa","adenotricha",NA,"Species","2","1","0&4&5","0&4","1",16.338,11.936,0.946,0.338,NA,NA
+"Mimosa_aguapeia","Liau-Kang",NA,"x","Mimosa aguapeia ","Mimosa aguapeia","Mimosa","aguapeia",NA,"Species","2","1","3","0","1",24.8,18.5,0.763,0.516,NA,NA
+"Mimosa_albolanata_brasiliana","Liau-Kang",NA,"x","Mimosa albolanata var. brasiliana ","Mimosa albolanata var. brasiliana","Mimosa","albolanata","brasiliana","Variety","2","1","0&3","0","1",20.4,13.1,0.745,0.495,NA,NA
+"Mimosa_amnisatri","Santos-Silva et al. 2013",NA,NA,"Mimosa amnis-atri ","Mimosa amnis-atri","Mimosa","amnis-atri",NA,"Species","2","1","3",NA,NA,12.7,13.1,NA,NA,NA,NA
+"Mimosa_apodocarpa","Santos-Silva et al. 2013",NA,NA,"Mimosa apodocarpa ","Mimosa apodocarpa","Mimosa","apodocarpa",NA,"Species","2","1","3",NA,NA,14.2,14.5,NA,NA,NA,NA
+"Mimosa_arenosa","Buril et al. 2010 ",NA,NA,"Mimosa arenosa ","Mimosa arenosa","Mimosa","arenosa",NA,"Species","3",NA,"3&4",NA,"0&1&2",13.8,10.1,NA,NA,NA,NA
+"Mimosa_arenosa_arenosa","Lima et al. 2008",NA,NA,"Mimosa arenosa var. arenosa ","Mimosa arenosa var. arenosa","Mimosa","arenosa","arenosa","Variety","3",NA,"3","0&4",NA,14.2,9.7,NA,1.2,NA,NA
+"Mimosa_artemisiana","Santos-Silva et al. 2013",NA,NA,"Mimosa artemisiana ","Mimosa artemisiana","Mimosa","artemisiana",NA,"Species","2","1",NA,NA,NA,25,15.5,NA,NA,NA,NA
+"Mimosa_aurivillus_aurivillus","Liau-Kang","26","x","Mimosa aurivillus var. aurivillus","Mimosa aurivillus var. aurivillus","Mimosa","aurivillus","aurivillus","Variety","2","0","0&5","4",NA,14.001,11.282,1.223,0.83,NA,NA
+"Mimosa_bimucronata","de Freitas Cruz et al. 2018; Liau-Kang; Barth & Yoneshigue 1966; Barth 1973","30",NA,"Mimosa bimucronata","Mimosa bimucronata","Mimosa","bimucronata",NA,"Species","3","1","0&5","2&3&4","0&1",14.855,10.855,0.2,0.165,1.5,0.5
+"Mimosa_bimucronata_bimucronata","Lima et al. 2008",NA,NA,"Mimosa bimucronata var. bimucronata","Mimosa bimucronata var. bimucronata","Mimosa","bimucronata","bimucronata","Variety","3",NA,NA,"0&4",NA,15.4,11.2,NA,1,NA,NA
+"Mimosa_borboremae","Lima et al. 2008",NA,NA,"Mimosa borboremae","Mimosa borboremae","Mimosa","borboremae",NA,"Species","2",NA,"0&5","0&4","0&1",11.9,8.7,NA,0.5,NA,NA
+"Mimosa_caerulea","Medina-Acosta-2018",NA,NA,"Mimosa caerulea","Mimosa caerulea","Mimosa","caerulea",NA,"Species","2","0&1","5","1&2","0",14,NA,1.6,1.06,NA,NA
+"Mimosa_caesalpiniifolia","Lima et al. 2008",NA,NA,"Mimosa caesalpiniifolia","Mimosa caesalpiniifolia","Mimosa","caesalpiniifolia",NA,"Species","3",NA,"3","0&4",NA,12.9,9.8,NA,1,NA,NA
+"Mimosa_calcicola","Medina-Acosta-2018",NA,NA,"Mimosa calcicola","Mimosa calcicola","Mimosa","calcicola",NA,"Species","3","1","3&4","1&2","0&1",16.73,12.88,0.8,0.9,NA,NA
+"Mimosa_campicola_campicola","Lima et al. 2008",NA,NA,"Mimosa campicola var. campicola","Mimosa campicola var. campicola","Mimosa","campicola","campicola","Variety","2",NA,"0&3","0&4","0&1",29.5,23.7,NA,1,NA,NA
+"Mimosa_candollei","Liau-Kang; Buril et al. 2010; Lima et al. 2008","23",NA,"Mimosa candollei  / Mimosa quadrivalvis var. leptocarpa","Mimosa candollei","Mimosa","candollei",NA,"Species","2","1&2","3&5","0&4","0&1",35.674,29.37,0.485,0.295,0.567,0.567
+"Mimosa_capito","Liau-Kang",NA,"x","Mimosa capito","Mimosa capito","Mimosa","capito",NA,"Species","2","1","0","0","1",20.1,12.7,0.435,0.34,NA,NA
+"Mimosa_ceratonia","de Freitas Cruz et al. 2018",NA,NA,"Mimosa ceratonia","Mimosa ceratonia","Mimosa","ceratonia",NA,"Species","5",NA,NA,"2",NA,23.5,20.6,NA,2,1,1
+"Mimosa_ceratonia_pseudoobovata","Liau-Kang","35","x","Mimosa ceratonia var. pseudo-obovata","Mimosa ceratonia var. pseudo-obovata","Mimosa","ceratonia","pseudo-obovata","Variety","2&3","1","5","0&2",NA,14.13,10.843,0.283,0.283,NA,NA
+"Mimosa_claussenii_claussenii","Liau-Kang",NA,"x","Mimosa claussenii var. claussenii ","Mimosa claussenii var. claussenii","Mimosa","claussenii","claussenii","Variety","2","1","0&4&5","0","1",16.25,13.75,0.515,0.39,NA,NA
+"Mimosa_claussenii_claviceps","Liau-Kang",NA,"x","Mimosa claussenii var. claviceps ","Mimosa claussenii var. claviceps","Mimosa","claussenii","claviceps","Variety","2","1","0","0","1",23,14.3,0.62,0.4,NA,NA
+"Mimosa_claussenii_megistophylla","Liau-Kang",NA,"x","Mimosa claussenii var. megistophylla","Mimosa claussenii var. megistophylla","Mimosa","claussenii","megistophylla","Variety","2","1","0","0",NA,20.4,12.9,0.585,0.45,NA,NA
+"Mimosa_claussenii_prorsiseta","Liau-Kang",NA,"x","Mimosa claussenii var. prorsiseta","Mimosa claussenii var. prorsiseta","Mimosa","claussenii","prorsiseta","Variety","2","1","0&4&5","0",NA,27.53,16.49,0.595,0.63,NA,NA
+"Mimosa_cordistipula","Lima et al. 2008",NA,NA,"Mimosa cordistipula ","Mimosa cordistipula","Mimosa","cordistipula",NA,"Species","2",NA,"0","0&4",NA,26.1,21.7,NA,1,NA,NA
+"Mimosa_coruscocaesia","Santos-Silva et al. 2013",NA,NA,"Mimosa coruscocaesia ","Mimosa coruscocaesia","Mimosa","coruscocaesia",NA,"Species","2","1","3",NA,NA,19.7,13.8,NA,NA,NA,NA
+"Mimosa_craspedisetosa","Santos-Silva et al. 2013",NA,NA,"Mimosa craspedisetosa / Mimosa ferricola","Mimosa craspedisetosa","Mimosa","craspedisetosa",NA,"Species","2","1","3",NA,NA,15.25,12.2,NA,NA,NA,NA
+"Mimosa_cruenta","Liau-Kang","46",NA,"Mimosa cruenta ","Mimosa cruenta","Mimosa","cruenta",NA,"Species","2","1","5","1&2",NA,14.905,9.537,0.781,0.157,NA,NA
+"Mimosa_daleoides","Medina-Acosta-2018",NA,NA,"Mimosa daleoides ","Mimosa daleoides","Mimosa","daleoides",NA,"Species","2",NA,"4","4","1&2",32.54,31.27,3.55,1.57,NA,NA
+"Mimosa_dalyi","Santos-Silva et al. 2013",NA,NA,"Mimosa dalyi ","Mimosa dalyi","Mimosa","dalyi",NA,"Species","2","1","3",NA,NA,15.6,13,NA,NA,NA,NA
+"Mimosa_debilis_debilis","Lima et al. 2008",NA,NA,"Mimosa debilis var. debilis ","Mimosa debilis var. debilis","Mimosa","debilis","debilis","Variety","2",NA,"0&5","0",NA,10.7,10.2,NA,0.8,NA,NA
+"Mimosa_dichroa","Santos-Silva et al. 2013",NA,NA,"Mimosa dichroa ","Mimosa dichroa","Mimosa","dichroa",NA,"Species","3","1","4",NA,NA,10.5,8.9,NA,NA,NA,NA
+"Mimosa_diplotricha_diplotricha","Liau-Kang","26","x","Mimosa diplotricha var. diplotricha ","Mimosa diplotricha var. diplotricha","Mimosa","diplotricha","diplotricha","Variety","2","1","3","1",NA,34.061,25.966,1.357,1.086,NA,NA
+"Mimosa_dolens_dolens","Liau-Kang","63",NA,"Mimosa dolens var. dolens","Mimosa dolens var. dolens","Mimosa","dolens","dolens","Variety","2","0","5","4",NA,13.169,11.988,0.264,0.268,NA,NA
+"Mimosa_dryandroides","Liau-Kang","39","x","Mimosa dryandoides ","Mimosa dryandroides","Mimosa","dryandroides",NA,"Species","2","1","0&5","0&4",NA,13.117,8.682,0.596,0.239,NA,NA
+"Mimosa_elliptica","de Freitas Cruz et al. 2018",NA,NA,"Mimosa elliptica ","Mimosa elliptica","Mimosa","elliptica",NA,"Species","3",NA,"3","2","0&1",27.8,22,NA,2,1,1
+"Mimosa_ephedroides","Caccavari 2002",NA,NA,"Mimosa ephedroides ","Mimosa ephedroides","Mimosa","ephedroides",NA,"Species","3","2","4",NA,NA,18,NA,NA,NA,NA,NA
+"Mimosa_exalbescens","Lima et al. 2008",NA,NA,"Mimosa exalbescens ","Mimosa exalbescens","Mimosa","exalbescens",NA,"Species","3",NA,NA,"0&4",NA,13.8,10.5,NA,0.5,NA,NA
+"Mimosa_fiebrigii","Santos-Silva et al. 2013",NA,NA,"Mimosa fiebrigii ","Mimosa fiebrigii","Mimosa","fiebrigii",NA,"Species","2","1","3",NA,NA,17.1,14.5,NA,NA,NA,NA
+"Mimosa_filipes","Lima et al. 2008",NA,NA,"Mimosa filipes ","Mimosa filipes","Mimosa","filipes",NA,"Species","2",NA,"0","0&4","0&1",21.7,20.5,NA,1.1,NA,NA
+"Mimosa_floridana","Flores-Cruz - 2006",NA,NA,"Mimosa quadrivalvis var. floridana ","Mimosa floridana","Mimosa","floridana",NA,"Species","2","1",NA,"4",NA,28,25,1.3,1.3,NA,NA
+"Mimosa_foliolosa_brevibractea","Liau-Kang",NA,"x","Mimosa foliolosa var. brevibractea ","Mimosa foliolosa var. brevibractea","Mimosa","foliolosa","brevibractea","Variety","2","1","0&3","0","1",20.1,13,0.55,0.36,NA,NA
+"Mimosa_foliolosa_franciscana","Liau-Kang",NA,"x","Mimosa foliolosa var. franciscana ","Mimosa foliolosa var. franciscana","Mimosa","foliolosa","franciscana","Variety","2","1","0&3","0","1",20.6,12.5,0.495,0.42,NA,NA
+"Mimosa_foliolosa_multipinna","Liau-Kang",NA,"x","Mimosa foliolosa var. multipinna ","Mimosa foliolosa var. multipinna","Mimosa","foliolosa","multipinna","Variety","2","1","0&3","0","1",19.7,13.1,0.59,0.5,NA,NA
+"Mimosa_foliolosa_pachycarpa","Liau-Kang","32","x","Mimosa foliolosa var. pachycarpa ","Mimosa foliolosa var. pachycarpa","Mimosa","foliolosa","pachycarpa","Variety","2","1","3","0",NA,18.019,13.474,0.415,0.37,NA,NA
+"Mimosa_foliolosa_paranani","Liau-Kang","10","x","Mimosa foliolosa var. paranani ","Mimosa foliolosa var. paranani","Mimosa","foliolosa","paranani","Variety","2","1","3&5","0&1",NA,20.16,12.96,0.31,0.28,NA,NA
+"Mimosa_foliolosa_pubescens","Liau-Kang","41, 64","x","Mimosa foliolosa var. pubescens ","Mimosa foliolosa var. pubescens","Mimosa","foliolosa","pubescens","Variety","2","1","3&5","0&1",NA,19.138,13.304,0.84,0.33,NA,NA
+"Mimosa_foliolosa_vernicosa","Liau-Kang",NA,"x","Mimosa foliolosa var. vernicosa ","Mimosa foliolosa var. vernicosa","Mimosa","foliolosa","vernicosa","Species","2","1","0&4&5","0","1",18.8,12.12,0.7,0.42,NA,NA
+"Mimosa_foliolosa_viscidula","Liau-Kang",NA,"x","Mimosa foliolosa var. viscidula ","Mimosa foliolosa var. viscidula","Mimosa","foliolosa","viscidula","Variety","2","1","0","0","1",20.6,13,0.7,0.81,NA,NA
+"Mimosa_gracilis_capillipes","Liau-Kang",NA,"x","Mimosa gracilis var. capillipes","Mimosa gracilis var. capillipes","Mimosa","gracilis","capillipes","Variety","2","1","0&3","0&4",NA,23.78,16.95,0.65,0.4,NA,NA
+"Mimosa_gemmulata","Liau-Kang; Lima et al. 2008; Santos-Silva et al. 2013",NA,NA,"Mimosa gemmulata ","Mimosa gemmulata","Mimosa","gemmulata",NA,"Species","2","1","0&4&5","0&4",NA,21.143,15.617,0.36,0.39,NA,NA
+"Mimosa_glutinosa","Santos-Silva et al. 2013",NA,NA,"Mimosa glutinosa ","Mimosa glutinosa","Mimosa","glutinosa",NA,"Species","2","1","3",NA,NA,18.5,12.8,NA,NA,NA,NA
+"Mimosa_guilandinae_extensissima","Caccavari 2002",NA,NA,"Mimosa guilandinae var. extensissima ","Mimosa guilandinae var. extensissima","Mimosa","guilandinae","extensissima","Variety","5","1","1","0",NA,23,NA,NA,NA,NA,NA
+"Mimosa_hapaloclada","Santos-Silva et al. 2013",NA,NA,"Mimosa hapaloclada ","Mimosa hapaloclada","Mimosa","hapaloclada",NA,"Species","3","1",NA,NA,NA,22.1,15.5,NA,NA,NA,NA
+"Mimosa_hebecarpa","Santos-Silva et al. 2013",NA,NA,"Mimosa hebecarpa ","Mimosa hebecarpa","Mimosa","hebecarpa",NA,"Species","2","1","3",NA,NA,18.1,14,NA,NA,NA,NA
+"Mimosa_hexandra","Lima et al. 2008",NA,NA,"Mimosa hexandra ","Mimosa hexandra","Mimosa","hexandra",NA,"Species","3",NA,NA,"0&4",NA,14.6,10.9,NA,0.5,NA,NA
+"Mimosa_honesta","Liau-Kang",NA,"x","Mimosa honesta","Mimosa honesta","Mimosa","honesta",NA,"Species","2","0","0&3","0&4",NA,7.88,6.78,0.215,0.21,NA,NA
+"Mimosa_hystricina","Flores-Cruz - 2006",NA,NA,"Mimosa hystricina ","Mimosa hystricina","Mimosa","hystricina",NA,"Species","2","1","0","4",NA,27,24,1.3,1.3,NA,NA
+"Mimosa_insignis","Santos-Silva et al. 2013",NA,NA,"Mimosa insignis ","Mimosa insignis","Mimosa","insignis",NA,"Species","2","1","3",NA,NA,16.6,12.5,NA,NA,NA,NA
+"Mimosa_interrupta","Santos-Silva et al. 2013",NA,NA,"Mimosa interrupta ","Mimosa interrupta","Mimosa","interrupta",NA,"Species","2","1","3",NA,NA,17.5,10.5,NA,NA,NA,NA
+"Mimosa_invisa","Buril et al. 2010; Lima et al. 2008",NA,NA,"Mimosa invisa ","Mimosa invisa","Mimosa","invisa",NA,"Species","2","1&2","0&3","0&4","1",22.233,18.033,NA,1.2,NA,NA
+"Mimosa_invisa_macrostachya","Liau-Kang","36",NA,"Mimosa invisa var. macrostachya ","Mimosa invisa var. macrostachya","Mimosa","invisa","macrostachya","Variety","2","1","3","0",NA,23.787,16.959,0.63,0.338,NA,NA
+"Mimosa_irrigua","Lima et al. 2008",NA,NA,"Mimosa irrigua ","Mimosa irrigua","Mimosa","irrigua",NA,"Species","3",NA,NA,"0&4",NA,18.5,13.1,NA,1,NA,NA
+"Mimosa_laniceps","Liau-Kang",NA,"x","Mimosa laniceps ","Mimosa laniceps","Mimosa","laniceps",NA,"Species","2","1","0","0","1",21,13.5,0.885,0.45,NA,NA
+"Mimosa_laticifera","Liau-Kang; Barth - 1973","45",NA,"Mimosa laticifera ","Mimosa laticifera","Mimosa","laticifera",NA,"Species","3",NA,"3","4","0&1",20.403,15.572,0.713,0.313,NA,NA
+"Mimosa_latidens","Flores-Cruz - 2006",NA,NA,"Mimosa latidens ","Mimosa latidens","Mimosa","latidens",NA,"Species","2","1","0","4",NA,33,30,1.3,1.3,NA,NA
+"Mimosa_lepidophora","Lima et al. 2008",NA,NA,"Mimosa lepidophora ","Mimosa lepidophora","Mimosa","lepidophora",NA,"Species","4",NA,"1","0",NA,22.7,18.6,NA,1.1,NA,NA
+"Mimosa_lewisii","Lima et al. 2008",NA,NA,"Mimosa lewisii ","Mimosa lewisii","Mimosa","lewisii",NA,"Species","2",NA,"0","0&4",NA,23.5,17.1,NA,1.1,NA,NA
+"Mimosa_maguirei","Liau-Kang",NA,"x","Mimosa maguirei ","Mimosa maguirei","Mimosa","maguirei",NA,"Species","2","1","0&5","0","1",19.7,13.1,0.67,0.49,NA,NA
+"Mimosa_manidea","Liau-Kang","4","x","Mimosa manidea","Mimosa manidea","Mimosa","manidea",NA,"Species","2","1","0&5","0","1",15.647,9.976,0.324,0.15,NA,NA
+"Mimosa_mensicola","Lima et al. 2008; Santos-Silva et al. 2013",NA,NA,"Mimosa mensicola","Mimosa mensicola","Mimosa","mensicola",NA,"Species","3","1",NA,"0&4",NA,14.75,11.4,NA,1,NA,NA
+"Mimosa_misera","Lima et al. 2008",NA,NA,"Mimosa misera ","Mimosa misera","Mimosa","misera",NA,"Species","2",NA,"3","0&4",NA,25.9,20.1,NA,1.1,NA,NA
+"Mimosa_modesta","Lima et al. 2008",NA,NA,"Mimosa modesta ","Mimosa modesta","Mimosa","modesta",NA,"Species","2",NA,"0&5","0",NA,9.9,9.3,NA,0.7,NA,NA
+"Mimosa_morroensis","Lima et al. 2008",NA,NA,"Mimosa morröensis ","Mimosa morroensis","Mimosa","morroensis",NA,"Species","2",NA,"0&5","0&4","0&1",11,9,NA,0.6,NA,NA
+"Mimosa_myrioglandulosa","Liau-Kang","11","x","Mimosa myrioglandulosa ","Mimosa myrioglandulosa","Mimosa","myrioglandulosa",NA,"Species","2","1","3&4","0",NA,16.75,11.292,0.393,0.257,NA,NA
+"Mimosa_nothopteris","Santos-Silva et al. 2013",NA,NA,"Mimosa nothopteris ","Mimosa nothopteris","Mimosa","nothopteris",NA,"Species","2","1",NA,NA,NA,16.5,13,NA,NA,NA,NA
+"Mimosa_obstrigosa","Caccavari 2002",NA,NA,"Mimosa obstrigosa ","Mimosa obstrigosa","Mimosa","obstrigosa",NA,"Species","2",NA,"5",NA,NA,10,NA,NA,NA,NA,NA
+"Mimosa_occidentalis","Medina-Acosta-2018",NA,NA,"Mimosa occidentalis ","Mimosa occidentalis","Mimosa","occidentalis",NA,"Species","2","0&1","5","1","0",15.1,10,0.75,0.87,NA,NA
+"Mimosa_oedoclada","Liau-Kang","1","x","Mimosa oedoclada ","Mimosa oedoclada","Mimosa","oedoclada",NA,"Species","2","1","3&5","0",NA,16.551,10.879,0.498,0.541,NA,NA
+"Mimosa_ophthalmocentra","Buril et al. 2010; Lima et al. 2008; Santos-Silva et al. 2013",NA,NA,"Mimosa ophthalmocentra","Mimosa ophthalmocentra","Mimosa","ophthalmocentra",NA,"Species","3","1","4","0&4","0&1&2",13.8,9.875,NA,0.6,NA,NA
+"Mimosa_paludosa","Liau-Kang; Lima et al. 2008","12",NA,"Mimosa paludosa / Mimosa setosa var. paludosa","Mimosa paludosa","Mimosa","paludosa",NA,"Species","2","1","0&5","0&4","1",22.55,15.5,0.905,0.79,NA,NA
+"Mimosa_papposa","Caccavari 2002",NA,NA,"Mimosa papposa ","Mimosa papposa","Mimosa","papposa",NA,"Species","2",NA,"4&5",NA,NA,12,NA,NA,NA,NA,NA
+"Mimosa_paraibana","Lima et al. 2008",NA,NA,"Mimosa paraibana ","Mimosa paraibana","Mimosa","paraibana",NA,"Species","3",NA,NA,"0&4",NA,13.8,10.2,NA,0.5,NA,NA
+"Mimosa_pigra","Lima et al. 2008",NA,NA,"Mimosa pigra ","Mimosa pigra","Mimosa","pigra",NA,"Species","2",NA,"0&3",NA,NA,25.7,18.1,NA,1,NA,NA
+"Mimosa_pigra_dehiscens","Liau-Kang","43",NA,"Mimosa pigra var. dehiscens  / Mimosa pigra","Mimosa pigra var. dehiscens","Mimosa","pigra","dehiscens","Variety","2","1","0&3","0&4","1",22.289,16.703,0.823,0.372,NA,NA
+"Mimosa_piresii","Liau-Kang",NA,"x","Mimosa piresii ","Mimosa piresii","Mimosa","piresii",NA,"Species","2","1","0&3","0","1",20.4,14.9,NA,NA,NA,NA
+"Mimosa_pithecolobioides","Lima et al. 2008; Liau-Kang",NA,NA,"Mimosa pithecolobioides","Mimosa pithecolobioides","Mimosa","pithecolobioides",NA,"Species","4","1","1","0",NA,23.174,16.969,0.313,0.307,NA,NA
+"Mimosa_pringlei_pringlei","Medina-Acosta-2018",NA,NA,"Mimosa pringlei var. pringlei ","Mimosa pringlei var. pringlei","Mimosa","pringlei","pringlei","Variety","3","1","4","1","0&1",16.56,12.61,0.76,0.87,NA,NA
+"Mimosa_prorepens","Liau-Kang",NA,"x","Mimosa prorepens ","Mimosa prorepens","Mimosa","prorepens",NA,"Species","2","1","0&5","0","1",16.9,11.8,0.49,0.47,NA,NA
+"Mimosa_pseudosepiaria","Lima et al. 2008",NA,NA,"Mimosa pseudosepiaria ","Mimosa pseudosepiaria","Mimosa","pseudosepiaria",NA,"Species","3",NA,NA,"0&4",NA,14.9,10.4,NA,0.5,NA,NA
+"Mimosa_pteridifolia","Liau-Kang; Santos-Silva et al. 2013","3",NA,"Mimosa pteridifolia","Mimosa pteridifolia","Mimosa","pteridifolia",NA,"Species","1&2","1","4&5","1",NA,20.346,14.655,0.374,0.284,NA,NA
+"Mimosa_pudica","Lima et al. 2008",NA,NA,"Mimosa pudica ","Mimosa pudica","Mimosa","pudica",NA,"Species","2",NA,"0&5","0",NA,10.4,10.1,NA,0.5,NA,NA
+"Mimosa_quadrivalvis_angustata","Flores-Cruz - 2006",NA,NA,"Mimosa quadrivalvis var. angustata ","Mimosa quadrivalvis var. angustata","Mimosa","quadrivalvis","angustata","Variety","2","1","0","4",NA,30,27,1.3,1.3,NA,NA
+"Mimosa_quadrivalvis_diffusa","Flores-Cruz - 2006",NA,NA,"Mimosa quadrivalvis var. diffusa ","Mimosa quadrivalvis var. diffusa","Mimosa","quadrivalvis","diffusa","Variety","2","1","0","4",NA,31,28,1.3,1.3,NA,NA
+"Mimosa_quadrivalvis_jaliscensis","Flores-Cruz - 2006",NA,NA,"Mimosa quadrivalvis var. jaliscensis ","Mimosa quadrivalvis var. jaliscensis","Mimosa","quadrivalvis","jaliscensis","Variety","2","1","0","4",NA,36,30,1.3,1.3,NA,NA
+"Mimosa_quadrivalvis_nuttallii","Flores-Cruz - 2006",NA,NA,"Mimosa nuttallii ","Mimosa quadrivalvis var. nuttallii","Mimosa","quadrivalvis","nuttallii","Variety","2","1","0","4",NA,29,26,1.3,1.3,NA,NA
+"Mimosa_quadrivalvis_occidentalis","Flores-Cruz - 2006",NA,NA,"Mimosa rupertiana ","Mimosa quadrivalvis var. occidentalis","Mimosa","quadrivalvis","occidentalis","Variety","2","1","0","1",NA,30,27,1.3,1.3,NA,NA
+"Mimosa_quadrivalvis_paucijuga","Flores-Cruz - 2006",NA,NA,"Mimosa paucijuga ","Mimosa quadrivalvis var. paucijuga","Mimosa","quadrivalvis","paucijuga","Variety","2","1","0","4",NA,35,30,0.6,0.6,NA,NA
+"Mimosa_quadrivalvis_platycarpa","Flores-Cruz - 2006",NA,NA,"Mimosa roemeriana ","Mimosa quadrivalvis var. platycarpa","Mimosa","quadrivalvis","platycarpa","Variety","2","1","0","1",NA,33,29,1.3,1.3,NA,NA
+"Mimosa_quadrivalvis_quadrivalvis","Flores-Cruz - 2006",NA,NA,"Mimosa quadrivalvis var. quadrivalvis ","Mimosa quadrivalvis var. quadrivalvis","Mimosa","quadrivalvis","quadrivalvis","Variety","2","1","0","4",NA,35,32,1.3,1.3,NA,NA
+"Mimosa_quadrivalvis_urbaniana","Flores-Cruz - 2006",NA,NA,"Mimosa quadrivalvis var. urbaniana ","Mimosa quadrivalvis var. urbaniana","Mimosa","quadrivalvis","urbaniana","Variety","2","1","0","1",NA,28,25,NA,NA,NA,NA
+"Mimosa_regnellii_supersetosa","Caccavari 2002",NA,NA,"Mimosa regnelli var. supercetosa ","Mimosa regnellii var. supersetosa","Mimosa","regnellii","supersetosa","Variety","2",NA,NA,"4",NA,27,NA,NA,NA,NA,NA
+"Mimosa_rhodostegia","Liau-Kang",NA,"x","Mimosa rhodostegia ","Mimosa rhodostegia","Mimosa","rhodostegia",NA,"Species","2","1","0&3","0","1",20.7,13.4,0.65,0.65,NA,NA
+"Mimosa_robusta","Flores-Cruz - 2006",NA,NA,"Mimosa robusta ","Mimosa robusta","Mimosa","robusta",NA,"Species","2","1","0","4",NA,47,39,1.3,1.3,NA,NA
+"Mimosa_rupigena","Liau-Kang",NA,"x","Mimosa setosa var. rupigena ","Mimosa rupigena","Mimosa","rupigena",NA,"Species","2","1","0&3","0","1",19.5,13.4,0.59,0.69,NA,NA
+"Mimosa_scabrella","Liau-Kang; Bauermann et al. 2009","27",NA,"Mimosa scabrella","Mimosa scabrella","Mimosa","scabrella",NA,"Species","2","2","0&5","6","1",13.49,9.575,0.604,0.772,NA,NA
+"Mimosa_schomburgkii","Santos-Silva et al. 2013",NA,NA,"Mimosa schomburgkii ","Mimosa schomburgkii","Mimosa","schomburgkii",NA,"Species","1&2","1","4&5",NA,NA,30,16.1,NA,NA,NA,NA
+"Mimosa_sensitiva","Buril et al. 2010",NA,NA,"Mimosa sensitiva","Mimosa sensitiva","Mimosa","sensitiva",NA,"Species","2",NA,"5","0","1",8.65,NA,NA,NA,NA,NA
+"Mimosa_sensitiva_sensitiva","Lima et al. 2008",NA,NA,"Mimosa sensitiva var. sensitiva ","Mimosa sensitiva var. sensitiva","Mimosa","sensitiva","sensitiva","Variety","2",NA,"0&5","0",NA,8.8,8.3,NA,1,NA,NA
+"Mimosa_sericantha","Santos-Silva et al. 2013",NA,NA,"Mimosa sericantha ","Mimosa sericantha","Mimosa","sericantha",NA,"Species","2","1","3&5",NA,NA,23,11.9,NA,NA,NA,NA
+"Mimosa_setosissima","Liau-Kang",NA,"x","Mimosa setosissima ","Mimosa setosissima","Mimosa","setosissima",NA,"Species","2","1","0&5","0","1",17.2,12.1,0.46,0.51,NA,NA
+"Mimosa_setuligera","Lima et al. 2008",NA,NA,"Mimosa setuligera ","Mimosa setuligera","Mimosa","setuligera",NA,"Species","2",NA,"5","0&4","0&1",12.7,10.9,NA,1,NA,NA
+"Mimosa_somnians_somnians","Lima et al. 2008",NA,NA,"Mimosa somnians var. somnians ","Mimosa somnians var. somnians","Mimosa","somnians","somnians","Variety","2",NA,"0&3","0&4",NA,20.1,12.5,NA,1,NA,NA
+"Mimosa_sousae","Medina-Acosta-2018",NA,NA,"Mimosa sousae ","Mimosa sousae","Mimosa","sousae",NA,"Species","2","0&1","5","1&2","0",14.67,10.33,1.63,1.04,NA,NA
+"Mimosa_spirocarpa","Medina-Acosta-2018",NA,NA,"Mimosa spirocarpa ","Mimosa spirocarpa","Mimosa","spirocarpa",NA,"Species","3","1","5","1&2","0&1",13.68,10.53,0.75,0.87,NA,NA
+"Mimosa_spixiana","Santos-Silva et al. 2013",NA,NA,"Mimosa spixiana ","Mimosa spixiana","Mimosa","spixiana",NA,"Species","2","1","0&5",NA,NA,18.2,16,NA,NA,NA,NA
+"Mimosa_strobiliflora","Liau-Kang","31","x","Mimosa strobiflora ","Mimosa strobiliflora","Mimosa","strobiliflora",NA,"Species","2","1","0&3","4",NA,20.16,13.784,1.124,0.333,NA,NA
+"Mimosa_subenervis","Lima et al. 2008",NA,NA,"Mimosa subenervis ","Mimosa subenervis","Mimosa","subenervis",NA,"Species","2",NA,"0","0&4","0&1",28.5,21.7,NA,1,NA,NA
+"Mimosa_subinermis","Flores-Cruz - 2006",NA,NA,"Mimosa subinermis","Mimosa subinermis","Mimosa","subinermis",NA,"Species","2","1","0",NA,NA,30,26,NA,NA,NA,NA
+"Mimosa_taimbensis","Barth & Yoneshigue 1966",NA,NA,"Mimosa taimbensis","Mimosa taimbensis","Mimosa","taimbensis",NA,"Species","2","0","0","3","2",19,11.9,1.7,1.2,NA,0.8
+"Mimosa_tandilensis","Caccavari 2002",NA,NA,"Mimosa tandilensis ","Mimosa tandilensis","Mimosa","tandilensis",NA,"Species","2","1",NA,"4",NA,31,NA,NA,NA,NA,NA
+"Mimosa_tenuiflora","Buril et al. 2010; Lima et al. 2008; Santos-Silva et al. 2013; Liau-Kang","47",NA,"Mimosa tenuiflora","Mimosa tenuiflora","Mimosa","tenuiflora",NA,"Species","2",NA,"0&5","0&5","1",20.373,14.063,0.355,0.505,NA,NA
+"Mimosa_tetragona","Flores-Cruz - 2006",NA,NA,"Mimosa tetragona ","Mimosa tetragona","Mimosa","tetragona",NA,"Species","2","1","0","1",NA,30,25,NA,NA,NA,NA
+"Mimosa_trianae","Santos-Silva et al. 2013",NA,NA,"Mimosa trianae ","Mimosa trianae","Mimosa","trianae",NA,"Species","1&2","1",NA,NA,NA,15.5,14,NA,NA,NA,NA
+"Mimosa_ulbrichiana","Lima et al. 2008",NA,NA,"Mimosa ulbrichiana ","Mimosa ulbrichiana","Mimosa","ulbrichiana",NA,"Species","2",NA,"0&3","0&4","0&1",26.8,20.5,NA,1,NA,NA
+"Mimosa_ulei_ulei","Liau-Kang",NA,"x","Mimosa ulei var. ulei ","Mimosa ulei var. ulei","Mimosa","ulei","ulei","Variety","2","1","0&5","0","1",18.4,11.4,0.3,0.57,NA,NA
+"Mimosa_ursina","Lima et al. 2008",NA,NA,"Mimosa ursina","Mimosa ursina","Mimosa","ursina",NA,"Species","0&1",NA,NA,"0","0",18.15,16,3.6,1.7,NA,NA
+"Mimosa_velloziana","Lima et al. 2008",NA,NA,"Mimosa velloziana ","Mimosa velloziana","Mimosa","velloziana",NA,"Species","2",NA,"0&5","0",NA,10.4,9.9,NA,0.5,NA,NA
+"Mimosa_verrucosa","Lima et al. 2008; Santos-Silva et al. 2013",NA,NA,"Mimosa verrucosa","Mimosa verrucosa","Mimosa","verrucosa",NA,"Species","2","1","0","0&4",NA,19.1,13.65,NA,1,NA,NA
+"Mimosa_watsonii","Medina-Acosta-2018",NA,NA,"Mimosa watsonii ","Mimosa watsonii","Mimosa","watsonii",NA,"Species","4","1","2","1&2","0",20.7,14.54,0.86,0.75,NA,NA
+"Mimosa_xavantinae","Santos-Silva et al. 2013",NA,NA,"Mimosa xavantinae ","Mimosa xavantinae","Mimosa","xavantinae",NA,"Species","2","1",NA,NA,NA,14.5,13,NA,NA,NA,NA
+"Mimosa_xiquexiquensis","Lima et al. 2008",NA,NA,"Mimosa xiquexiquensis ","Mimosa xiquexiquensis","Mimosa","xiquexiquensis",NA,"Species","2",NA,"0&5","0&4","0&1",16.6,13,NA,0.5,NA,NA
