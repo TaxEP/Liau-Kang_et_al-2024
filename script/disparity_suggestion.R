@@ -246,6 +246,8 @@ tree_tibble$node.labels[
 tree_tibble$node.labels[
   tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "O"])] <- "O"
 tree_tibble$node.labels[
+  tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "P"])] <- "P"
+tree_tibble$node.labels[
   tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "Q"])] <- "Q"
 tree_tibble$node.labels[
   tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "R"])] <- "R"
