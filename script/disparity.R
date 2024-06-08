@@ -268,6 +268,8 @@ tree_tibble$node.labels[
 c(tree_tibble$node.labels[!is.na(tree_tibble$node.labels)])
 clade_nodes <- tree_tibble[!is.na(tree_tibble$node.labels), "node"]
 
+dat <- dat[match(tree$tip.label, dat$taxon), ]
+
 dat$Pollen_data <- ifelse(dat$taxon %in% dat_pollen$cleaned_name, 
                                  ifelse(dat_pollen$new_description[match(dat$taxon, dat_pollen$cleaned_name)] == "x", 
                                         "New description", "Literature"), 
@@ -281,20 +283,24 @@ tree_tibble$Pollen_data[1:358] <- dat$Pollen_data[1:358]
 
 tree_data <- as.treedata(tree_tibble)
 
-tree_plot <- ggtree(tree_data, branch.length = "none", right = T) + 
+p <- ggtree(tree_data, branch.length = "none", right = T) + 
   geom_nodepoint(aes(subset = node %in% clade_nodes$node[c(1,2,4,5,6,7,11,13,14,16,18)]), 
-                 color = "skyblue", fill = "skyblue", size = 5, shape = 16) +
+                 color = "#FFB2BC", fill = "#FFB2BC", size = 3, shape = 15) +
   geom_nodepoint(aes(subset = node %in% clade_nodes$node[c(3,8,9,10,12,15,17)]), 
-                 color = "green", fill = "green", size = 5, shape = 17) +
+                 color = "#A6EDFF", fill = "#A6EDFF", size = 3, shape = 19) +
   geom_text(aes(label = node.labels), hjust = 0.5, vjust = 0.5, 
-            color = "black",size=3) +
-  geom_tippoint(aes(color=Pollen_data), size=0.4, alpha=1, shape = 15, show.legend = F) +
-  scale_color_brewer("Pollen_data", palette="Spectral")
+            color = "black",size=2)
 
-gheatmap(tree_plot, dat$Pollen_data, offset = 10, color=NULL, 
-         colnames_position="top", 
-         colnames_angle=90, colnames_offset_y = 1, 
-         hjust=0, font.size=2)
+## heatmap
+
+dat_heatmap <- dat[4]
+rownames(dat_heatmap) <- dat$taxon
+
+tree_plot <- gheatmap(p, dat_heatmap, 
+                      width=.05, 
+                      offset=-1, 
+                      colnames=F) +
+  scale_fill_manual(values=c("grey", "blue", "red"))
 
 pdf("output/plots/tree_clades.pdf")
 
