@@ -282,7 +282,7 @@ dat <- dat[match(tree$tip.label, dat$taxon), ]
 
 dat$data_info <- ifelse(dat$taxon %in% dat_pollen$cleaned_name, 
                           ifelse(grepl("Liau-Kang", dat_pollen$source[match(dat$taxon, dat_pollen$cleaned_name)]), 
-                                 "Contribution", 
+                                 "Redescription", 
                                  "Literature"), 
                           "Lacking")
 
@@ -297,7 +297,7 @@ tree_plot <- gheatmap(p, dat_heatmap,
                       width=.05, 
                       offset=-1, 
                       colnames=F) +
-  scale_fill_manual(values=c("orange", "grey", "blue", "red"))
+  scale_fill_manual(values=c("grey", "blue", "red", "orange"))
 
 pdf("output/plots/tree_clades.pdf")
 
