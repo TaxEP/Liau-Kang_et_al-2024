@@ -1,13 +1,13 @@
-#---------------------------------------------------------------------------#
+#===========================================================================#
 # Script: Mimosa pollen grains morphology - sample and disparity analyses   #
 # Written by: R. F. Barduzzi                                                #
 #	Date: 2023-2024                                                           #
 # Associated paper: Liau-Kang et al. 2024                                   #
-#---------------------------------------------------------------------------#
+#===========================================================================#
 
-### MIMOSA POLLEN SAMPLING INFORMATIONS
-
-  #### 1. Libraries and data ####
+#=============================#
+#### 1. Libraries and data ####
+#=============================#
 
   # part. 2
 library(tidyverse)
@@ -30,11 +30,11 @@ dat_clade <- read.csv("data/Mimosa_tree_data-Vasconcelos2020.csv",
 
 dat_pollen <- read.csv("data/pollen_data-mimosa.csv")
 
-
+#============================#
+#### 2. Sampling Analyses ####
+#============================#
 
 #-----------------------------------------------------------------------------#
-
-  #### 2. Sampling Analyses ####
 ##### Updating and cleaning data #####
 
 ## formatting tree and clade data to TNRS
@@ -141,12 +141,7 @@ dat_clade <- dat_clade[!duplicated(dat_clade$accepted_name), ]
 setdiff(tree$tip.label, dat_clade$accepted_name)
 # Mimosa eurystegia really don't have clade info... moving on
 
-
-
 #-----------------------------------------------------------------------------#
-
-
-
 ##### Generating analyses data #####
 
 tree <- keep.tip(tree, tree$tip.label[grep("^Mimosa_", tree$tip.label)])
@@ -169,12 +164,7 @@ dat <- dat %>%
 
 write.csv(dat, "output/data/spp_clade_data.csv", row.names = F)
 
-
-
 #-----------------------------------------------------------------------------#
-
-
-
 ##### Analyzing sampling #####
 
 ## Percentage of tree taxa with pollen data (original)
@@ -215,7 +205,9 @@ write.csv(clades_percentages,
           "output/data/sampling-clade_percentages.csv",
           row.names = F)
 
-  #### 3. Tree plot (Fig. 1) ####
+#====================#
+#### 3. Tree plot ####
+#====================#
 
 ## Marking clades
 
@@ -316,11 +308,14 @@ liaukang_descriptions <- dat_pollen$cleaned_name[grepl("Liau-Kang",
                                                        dat_pollen$source)]
 setdiff(liaukang_descriptions, tree$tip.label)
 
-  #### 4. Disparity Analyses ####
+#=============================#
+#### 4. Disparity Analyses ####
+#=============================#
 
 dat_pollen <- read.csv("data/pollen_data-mimosa.csv", na.strings = c("NA")) %>%
   filter(genus == "Mimosa")
 
+#-----------------------------------------------------------------------------#
 ##### Preparing data for disparity analysis #####
 
 ## creating dataframe with important information columns
@@ -397,6 +392,7 @@ matrix_pollen <- arules::discretizeDF(
   )
 )
 
+#-----------------------------------------------------------------------------#
 ##### Morphospace (Fig. 8A) #####
 
 # characters ordination
@@ -481,8 +477,7 @@ morphospace
 
 dev.off()
 
-
-
+#-----------------------------------------------------------------------------#
 ##### Disparity Metrics (Fig. 8B-E) #####
 
 ## creating lists grouping species of each clade
