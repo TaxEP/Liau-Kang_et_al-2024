@@ -1,5 +1,11 @@
+#############################################################################
+# Script: Mimosa pollen grains morphology - sample and disparity analyses   #
+# Written by: R. F. Barduzzi                                                #
+#	Date: 2023-2024                                                           #
+# Associated paper: Liau-Kang et al. 2024                                   #
+#############################################################################
+
 ### MIMOSA POLLEN SAMPLING INFORMATIONS
-## 04-06-2024
 
   #### 1. Libraries and data ####
 
@@ -22,9 +28,7 @@ tree <- read.tree("data/mimosa_tree-Vasconcelos2020.tre")
 dat_clade <- read.csv("data/Mimosa_tree_data-Vasconcelos2020.csv", 
                       header = T, sep = ",")
 
-dat_pollen <- read.csv("data/pollen_data-mimosa.csv") %>%
-  filter(genus == "Mimosa") %>%
-  select(cleaned_name, new_description)
+dat_pollen <- read.csv("data/pollen_data-mimosa.csv")
 
 
 
@@ -248,6 +252,8 @@ tree_tibble$node.labels[
 tree_tibble$node.labels[
   tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "O"])] <- "O"
 tree_tibble$node.labels[
+  tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "P"])] <- "P"
+tree_tibble$node.labels[
   tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "Q"])] <- "Q"
 tree_tibble$node.labels[
   tree_tibble$node == getMRCA(tree, dat$taxon[dat$clade %in% "R"])] <- "R"
@@ -268,30 +274,27 @@ tree_tibble$node.labels[
 c(tree_tibble$node.labels[!is.na(tree_tibble$node.labels)])
 clade_nodes <- tree_tibble[!is.na(tree_tibble$node.labels), "node"]
 
-dat <- dat[match(tree$tip.label, dat$taxon), ]
-
-dat$Pollen_data <- ifelse(dat$taxon %in% dat_pollen$cleaned_name, 
-                                 ifelse(dat_pollen$new_description[match(dat$taxon, dat_pollen$cleaned_name)] == "x", 
-                                        "New description", "Literature"), 
-                                 "Lacking")
-
-dat$Pollen_data[is.na(dat$Pollen_data)] <- "Literature"
-
-tree_tibble$Pollen_data <- NA
-
-tree_tibble$Pollen_data[1:358] <- dat$Pollen_data[1:358]
-
 tree_data <- as.treedata(tree_tibble)
 
 p <- ggtree(tree_data, branch.length = "none", right = T) + 
-  geom_nodepoint(aes(subset = node %in% clade_nodes$node[c(1,2,4,5,6,7,11,13,14,16,18)]), 
-                 color = "#FFB2BC", fill = "#FFB2BC", size = 3, shape = 15) +
-  geom_nodepoint(aes(subset = node %in% clade_nodes$node[c(3,8,9,10,12,15,17)]), 
-                 color = "#A6EDFF", fill = "#A6EDFF", size = 3, shape = 19) +
+  geom_nodepoint(aes(subset = node %in% clade_nodes$node), 
+                 color = "black", fill = "black", size = 3, shape = 15, alpha=.75) +
   geom_text(aes(label = node.labels), hjust = 0.5, vjust = 0.5, 
-            color = "black",size=2)
+            color = "white",size=2)
 
 ## heatmap
+
+dat <- dat[match(tree$tip.label, dat$taxon), ]
+
+dat$data_info <- ifelse(dat$taxon %in% dat_pollen$cleaned_name, 
+                          ifelse(grepl("Liau-Kang", dat_pollen$source[match(dat$taxon, dat_pollen$cleaned_name)]), 
+                                 "Redescription", 
+                                 "Literature"), 
+                          "Lacking")
+
+dat$data_info[
+  dat_pollen$new_description[
+    match(dat$taxon, dat_pollen$cleaned_name)] == "x"] <- "New description"
 
 dat_heatmap <- dat[4]
 rownames(dat_heatmap) <- dat$taxon
@@ -300,13 +303,18 @@ tree_plot <- gheatmap(p, dat_heatmap,
                       width=.05, 
                       offset=-1, 
                       colnames=F) +
-  scale_fill_manual(values=c("grey", "blue", "red"))
+  scale_fill_manual(values=c("grey", "blue", "red", "orange"))
 
 pdf("output/plots/tree_clades.pdf")
 
 tree_plot
 
 dev.off()
+
+## which new or re-descriptions are not in the tree?
+liaukang_descriptions <- dat_pollen$cleaned_name[grepl("Liau-Kang",
+                                                       dat_pollen$source)]
+setdiff(liaukang_descriptions, tree$tip.label)
 
   #### 4. Disparity Analyses ####
 
@@ -481,7 +489,7 @@ dev.off()
 ## (one list for before and other for after new descriptions)
 
 # adding clade information to info_pollen
-vectors_clades <- merge(info_pollen, dat_clade[, c("taxon", "clade")], 
+vectors_clades <- merge(info_pollen, dat[, c("taxon", "clade")], 
              by.x = "cleaned_name", 
              by.y = "taxon", all.x = TRUE)
 
