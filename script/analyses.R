@@ -326,7 +326,7 @@ info_pollen <- dat_pollen %>%
 ## filtering for characters with missing data minor or equal to 60%
 
 matrix_pollen <- dat_pollen %>%
-  select(11:21) %>% #selecting columns with pollen characters
+  select(10:20) %>% #selecting columns with pollen characters
   .[, colMeans(is.na(.)) * 100 <= 40] #filtering
 
 rownames(matrix_pollen) <- dat_pollen$cleaned_name
